@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona 2026 - Mapa de Hospedajes e Itinerario</title>
+    <meta name="description" content="Planificador interactivo para el viaje a Barcelona. Compara opciones de hospedaje y explora el itinerario diario en un mapa interactivo.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+          
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Panel -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <div class="logo-area">
+                    <span class="logo-icon"><i class="fa-solid fa-compass-drafting"></i></span>
+                    <div>
+                        <h1>Barcelona 2026</h1>
+                        <p class="subtitle">Planificador de Viaje Familiar</p>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="btn-icon" title="Cambiar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </header>
+
+            <!-- Navigation Tabs -->
+            <nav class="tabs">
+                <button id="tab-lodgings" class="tab-btn active" data-tab="lodgings">
+                    <i class="fa-solid fa-house-chimney"></i> Hospedajes <span class="badge" id="lodging-count">0</span>
+                </button>
+                <button id="tab-itinerary" class="tab-btn" data-tab="itinerary">
+                    <i class="fa-solid fa-calendar-days"></i> Itinerario <span class="badge">5 Días</span>
+                </button>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="sidebar-content">
+                <!-- LODGINGS TAB -->
+                <div id="panel-lodgings" class="tab-panel active">
+                    <!-- Filters section -->
+                    <div class="filters-container">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-input" placeholder="Buscar hospedaje...">
+                        </div>
+                        
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label for="filter-price-slider">Presupuesto Máx: <span id="price-val">Cargando...</span></label>
+                                <input type="range" id="filter-price-slider" min="1000" max="3000" step="50" value="3000">
+                            </div>
+                        </div>
+
+                        <div class="filter-row flex">
+                            <div class="filter-group col">
+                                <label for="filter-site">Plataforma</label>
+                                <select id="filter-site">
+                                    <option value="all">Todas</option>
+                                    <option value="Booking">Booking.com</option>
+                                    <option value="Airbnb">Airbnb</option>
+                                    <option value="Hoteles.com">Hoteles.com</option>
+                                </select>
+                            </div>
+                            <div class="filter-group col">
+                                <label for="filter-beds">Camas Mínimas</label>
+                                <select id="filter-beds">
+                                    <option value="all">Cualquiera</option>
+                                    <option value="3">3 o más camas</option>
+                                    <option value="5">5 o más camas</option>
+                                    <option value="6">6 o más camas</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-row flex">
+                            <div class="filter-group col">
+                                <label for="filter-cancel">Cancelación</label>
+                                <select id="filter-cancel">
+                                    <option value="all">Cualquiera</option>
+                                    <option value="free">Solo Cancelación Gratis / Flexible</option>
+                                </select>
+                            </div>
+                            <div class="filter-group col">
+                                <label for="sort-by">Ordenar por</label>
+                                <select id="sort-by">
+                                    <option value="opcion">Nro Opción</option>
+                                    <option value="price-asc">Precio: Menor a Mayor</option>
+                                    <option value="price-desc">Precio: Mayor a Menor</option>
+                                    <option value="rating">Calificación</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lodgings list -->
+                    <div class="list-container" id="lodgings-list">
+                        <!-- Lodging cards will render here -->
+                    </div>
+                </div>
+
+                <!-- ITINERARY TAB -->
+                <div id="panel-itinerary" class="tab-panel">
+                    <div class="itinerary-intro">
+                        <p><i class="fa-solid fa-circle-info"></i> Recorrido pensado para familia con 3 niños (8, 11 y 14 años). Haz clic en las actividades para ver su ubicación en el mapa.</p>
+                    </div>
+                    
+                    <!-- Days Filter Selector -->
+                    <div class="days-selector">
+                        <button class="day-selector-btn active" data-day="all">Todos</button>
+                        <button class="day-selector-btn" data-day="1">Día 1</button>
+                        <button class="day-selector-btn" data-day="2">Día 2</button>
+                        <button class="day-selector-btn" data-day="3">Día 3</button>
+                        <button class="day-selector-btn" data-day="4">Día 4</button>
+                        <button class="day-selector-btn" data-day="5">Día 5</button>
+                    </div>
+
+                    <!-- Itinerary list -->
+                    <div class="list-container" id="itinerary-list">
+                        <!-- Itinerary days will render here -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Map Container -->
+        <main class="map-wrapper">
+            <div id="map"></div>
+            
+            <!-- Map Overlay Legend / Info -->
+            <div class="map-overlay-legend">
+                <div class="legend-title">Referencias</div>
+                <div class="legend-item">
+                    <span class="legend-marker marker-lodging"><i class="fa-solid fa-house"></i></span>
+                    <span>Hospedaje</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker marker-tourist"><i class="fa-solid fa-star"></i></span>
+                    <span>Punto Turístico</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+            
+    <!-- Data & Script -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
