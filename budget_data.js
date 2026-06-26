@@ -1,0 +1,23 @@
+const BUDGET_DATA = {
+    "t2": { options: [{ name: "Aporte Sugerido (Familia)", isFamilyPrice: true, priceAdult: 50 }] },
+    "t4": { options: [{ name: "Entrada Cultural", priceAdult: 16 }] },
+    "t6": { options: [{ name: "Aporte Sugerido (Familia)", isFamilyPrice: true, priceAdult: 50 }] },
+    "t7": { options: [{ name: "Visita Guiada Cubiertas", priceAdult: 10 }] },
+    "t8": { options: [{ name: "Entrada General", priceAdult: 18 }] },
+    "t9": { options: [{ name: "Aporte Sugerido (Familia)", isFamilyPrice: true, priceAdult: 50 }] },
+    "t11": { options: [{ name: "Ascensor Mirador", priceAdult: 4.50 }, { name: "Parque de Atracciones", priceAdult: 39 }] },
+    "t12": { options: [{ name: "Boleto Sencillo (Metro/Bus)", priceAdult: 2.50 }] },
+    "t13": { options: [{ name: "Visita Diurna", priceAdult: 25 }, { name: "Visita Nocturna", priceAdult: 39 }] },
+    "t15": { options: [{ name: "Visita Autoguiada", priceAdult: 16 }] },
+    "t18": { options: [{ name: "Ascensor Exterior", priceAdult: 1 }] },
+    "t19": { options: [{ name: "Bus 150", priceAdult: 2.50 }, { name: "Teleférico de Montjuïc (Ida y Vuelta)", priceAdult: 16 }] },
+    "t25": { options: [{ name: "Aporte Sugerido (Familia)", isFamilyPrice: true, priceAdult: 50 }] },
+    "t27": { options: [{ name: "Aeri del Port (Ida)", priceAdult: 12.50 }, { name: "Aeri del Port (Ida y Vuelta)", priceAdult: 20 }] },
+    "t28": { options: [{ name: "Boleto Sencillo (Metro/Bus)", priceAdult: 2.50 }] },
+    "t29": { options: [{ name: "Entrada Básica", priceAdult: 29 }] },
+    "t30": { options: [{ name: "Entrada General", priceAdult: 21 }] },
+    "t32": { options: [{ name: "Entrada Básica", priceAdult: 26 }, { name: "Entrada con Torres", priceAdult: 40 }] },
+    "t33": { options: [{ name: "Entrada General (Menores de 12 Gratis)", priceAdult: 16, price14: 16, price11: 0, price8: 0 }] },
+    "t34": { options: [{ name: "Immersive Tour Básico", priceAdult: 28 }, { name: "Immersive Tour Flexible", priceAdult: 38 }, { name: "Immersive Guided Tour", priceAdult: 51 }] },
+    "t36": { options: [{ name: "Mirador Básico", priceAdult: 18 }] }
+};

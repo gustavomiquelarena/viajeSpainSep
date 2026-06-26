@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barcelona 2026 - Mapa de Hospedajes e Itinerario</title>
-    <meta name="description" content="Planificador interactivo para el viaje a Barcelona. Compara opciones de hospedaje y explora el itinerario diario en un mapa interactivo.">
-    
+    <meta name="description"
+        content="Planificador interactivo para el viaje a Barcelona. Compara opciones de hospedaje y explora el itinerario diario en un mapa interactivo.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossorigin=""/>
-          
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom Style -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dark-theme">
     <div class="app-container">
         <!-- Sidebar Panel -->
@@ -31,42 +35,48 @@
                     <span class="logo-icon"><i class="fa-solid fa-compass-drafting"></i></span>
                     <div>
                         <h1>Barcelona 2026</h1>
-                        <p class="subtitle">Planificador de Viaje Familiar</p>
+                        <p class="subtitle">Planificador de Viaje</p>
                     </div>
                 </div>
-                <button id="theme-toggle" class="btn-icon" title="Cambiar tema">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+                <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-end;">
+                    <button id="tab-viability" class="tab-btn viability-top-btn" data-tab="viability" title="Consejos"
+                        style="width: auto; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; font-family: 'Inter', sans-serif; gap: 6px; display: flex; align-items: center; white-space: nowrap; cursor: pointer; transition: all 0.2s ease;">
+                        <i class="fa-solid fa-circle-exclamation"></i> Consejos
+                    </button>
+                    <button id="btn-budget" class="tab-btn budget-top-btn" title="Presupuesto"
+                        style="width: auto; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; font-family: 'Inter', sans-serif; gap: 6px; display: flex; align-items: center; white-space: nowrap; cursor: pointer; transition: all 0.2s ease;">
+                        <i class="fa-solid fa-calculator"></i> Presupuesto
+                    </button>
+                </div>
             </header>
 
             <!-- Navigation Tabs -->
             <nav class="tabs">
-                <button id="tab-lodgings" class="tab-btn active" data-tab="lodgings">
-                    <i class="fa-solid fa-house-chimney"></i> Hospedajes <span class="badge" id="lodging-count">0</span>
-                </button>
-                <button id="tab-itinerary" class="tab-btn" data-tab="itinerary">
+                <button id="tab-itinerary" class="tab-btn active" data-tab="itinerary">
                     <i class="fa-solid fa-calendar-days"></i> Itinerario <span class="badge">5 Días</span>
                 </button>
-                <button id="tab-viability" class="tab-btn" data-tab="viability">
-                    <i class="fa-solid fa-circle-exclamation"></i> Consejos
+                <button id="tab-lodgings" class="tab-btn" data-tab="lodgings">
+                    <i class="fa-solid fa-house-chimney"></i> Hospedajes <span class="badge" id="lodging-count">0</span>
                 </button>
             </nav>
 
             <!-- Content Area -->
             <div class="sidebar-content">
                 <!-- LODGINGS TAB -->
-                <div id="panel-lodgings" class="tab-panel active">
+                <div id="panel-lodgings" class="tab-panel">
                     <!-- Filters section -->
                     <div class="filters-container">
                         <div class="search-box">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" id="search-input" placeholder="Buscar hospedaje...">
                         </div>
-                        
+
                         <div class="filter-row">
                             <div class="filter-group">
-                                <label for="filter-price-slider">Presupuesto Máx: <span id="price-val">Cargando...</span></label>
-                                <input type="range" id="filter-price-slider" min="1000" max="3000" step="50" value="3000">
+                                <label for="filter-price-slider">Presupuesto Máx: <span
+                                        id="price-val">Cargando...</span></label>
+                                <input type="range" id="filter-price-slider" min="1000" max="3000" step="50"
+                                    value="3000">
                             </div>
                         </div>
 
@@ -118,8 +128,8 @@
                 </div>
 
                 <!-- ITINERARY TAB -->
-                <div id="panel-itinerary" class="tab-panel">
-                    
+                <div id="panel-itinerary" class="tab-panel active">
+
                     <!-- Days Filter Selector -->
                     <div class="days-selector">
                         <button class="day-selector-btn active" data-day="all">Todos</button>
@@ -142,7 +152,8 @@
                         <p style="font-weight: 600; font-size: 13px; color: var(--accent-color);">
                             <i class="fa-solid fa-circle-exclamation"></i> Cuestiones Críticas a Tener Presente
                         </p>
-                        <p style="margin-top: 4px;">Información recopilada de viabilidad turística, reservas de entradas, aforos y alertas operativas para Barcelona.</p>
+                        <p style="margin-top: 4px;">Información recopilada de viabilidad turística, reservas de
+                            entradas, aforos y alertas operativas para Barcelona.</p>
                     </div>
                     <div class="list-container" id="viability-list" style="padding-top: 0;">
                         <!-- Viability content renders here -->
@@ -154,7 +165,7 @@
         <!-- Map Container -->
         <main class="map-wrapper">
             <div id="map"></div>
-            
+
             <!-- Map Overlay Legend / Info -->
             <div class="map-overlay-legend">
                 <div class="legend-title">Referencias</div>
@@ -167,8 +178,10 @@
                     <span>Punto Turístico</span>
                 </div>
                 <hr style="border:0; border-top:1px solid var(--border-color); margin: 10px 0;">
-                <div class="legend-item" style="cursor: pointer; display: flex; align-items: center;" id="toggle-both-btn">
-                    <i class="fa-solid fa-toggle-off" id="toggle-both-icon" style="font-size:1.2rem; color:var(--text-muted); margin-right:8px; transition: color 0.3s;"></i>
+                <div class="legend-item" style="cursor: pointer; display: flex; align-items: center;"
+                    id="toggle-both-btn">
+                    <i class="fa-solid fa-toggle-off" id="toggle-both-icon"
+                        style="font-size:1.2rem; color:var(--text-muted); margin-right:8px; transition: color 0.3s;"></i>
                     <span style="font-size:0.85rem; font-weight:600;">Mostrar Ambos</span>
                 </div>
             </div>
@@ -185,21 +198,25 @@
                     <span id="modal-time" class="time-badge"><i class="fa-regular fa-clock"></i> <span></span></span>
                 </div>
                 <h2 id="modal-title"></h2>
-                
+
                 <div class="modal-section">
                     <h3><i class="fa-solid fa-align-left"></i> Descripción y Actividades</h3>
                     <p id="modal-description" class="modal-description-text"></p>
                 </div>
-                
+
                 <div class="modal-section viability-section">
-                    <h3><i class="fa-solid fa-clipboard-check"></i> Información de Viabilidad</h3>
-                    <div class="viability-text-container" style="background: rgba(255, 255, 255, 0.04); padding: 14px; border-radius: 8px; border-left: 4px solid var(--accent-color); margin-top: 8px;">
-                        <p id="modal-viability-text" style="font-size: 13.5px; line-height: 1.6; color: var(--text-main); margin: 0; white-space: pre-line;"></p>
+                    <h3><i class="fa-solid fa-clipboard-check"></i> Puntos de atención</h3>
+                    <div class="viability-text-container"
+                        style="background: rgba(255, 255, 255, 0.04); padding: 14px; border-radius: 8px; border-left: 4px solid var(--accent-color); margin-top: 8px;">
+                        <p id="modal-viability-text"
+                            style="font-size: 13.5px; line-height: 1.6; color: var(--text-main); margin: 0; white-space: pre-line;">
+                        </p>
                     </div>
                 </div>
 
                 <div class="modal-footer-sec" style="margin-top: 10px; display: flex; gap: 10px;">
-                    <a id="modal-maps-link" href="" target="_blank" class="btn-primary" style="background-color: var(--accent-color); text-align: center; justify-content: center; text-decoration: none; width: 100%;">
+                    <a id="modal-maps-link" href="" target="_blank" class="btn-primary"
+                        style="background-color: var(--accent-color); text-align: center; justify-content: center; text-decoration: none; width: 100%;">
                         <i class="fa-solid fa-map-location-dot"></i> Ver ubicación en Google Maps
                     </a>
                 </div>
@@ -207,13 +224,36 @@
         </div>
     </div>
 
+    <!-- BUDGET MODAL -->
+    <div id="budget-view" class="budget-modal-backdrop hidden">
+        <div class="budget-modal-container">
+            <div class="budget-header">
+                <h2><i class="fa-solid fa-calculator"></i> Presupuestador de Itinerario</h2>
+                <button id="close-budget-btn" class="close-budget-btn"><i class="fa-solid fa-xmark"></i> Cerrar</button>
+            </div>
+            <div class="budget-info">
+                <p><strong>Grupo Familiar:</strong> 2 Adultos, 3 Niños (14, 11 y 8 años)</p>
+            </div>
+            <div class="budget-content">
+                <div id="budget-list" class="budget-list">
+                    <!-- Budget items will be rendered here -->
+                </div>
+            </div>
+            <div class="budget-footer">
+                <div class="budget-total-label">Total Estimado</div>
+                <div class="budget-total-value" id="budget-total-value">€ 0.00</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-            
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <!-- Data & Script -->
     <script src="data.js"></script>
+    <script src="budget_data.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>

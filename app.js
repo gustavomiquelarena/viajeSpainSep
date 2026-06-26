@@ -1,8 +1,6 @@
 // Wait for DOM to load
 document.addEventListener("DOMContentLoaded", () => {
     // UI Elements
-    const themeToggleBtn = document.getElementById("theme-toggle");
-    const themeIcon = themeToggleBtn.querySelector("i");
     const tabBtns = document.querySelectorAll(".tab-btn");
     const tabPanels = document.querySelectorAll(".tab-panel");
     const searchInput = document.getElementById("search-input");
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dayBtns = document.querySelectorAll(".day-selector-btn");
     const toggleBothBtn = document.getElementById("toggle-both-btn");
     const toggleBothIcon = document.getElementById("toggle-both-icon");
-    
+
     const lodgingCountBadge = document.getElementById("lodging-count");
     const lodgingsListContainer = document.getElementById("lodgings-list");
     const itineraryListContainer = document.getElementById("itinerary-list");
@@ -36,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeMarkerId = null;
 
     // State Variables
-    let activeTab = "lodgings";
+    let activeTab = "itinerary";
     let filterMaxPrice = 3000;
     let filterSite = "all";
     let filterBeds = "all";
@@ -47,39 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let showBothOnMap = false;
 
     // Initialize Application
-    initTheme();
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
     initMap();
     setupEventListeners();
     renderLodgings();
     renderItinerary();
     renderViabilityList();
     updateMapMarkers();
-
-    // Theme logic
-    function initTheme() {
-        const darkThemePreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (darkThemePreferred) {
-            document.body.classList.add("dark-theme");
-            document.body.classList.remove("light-theme");
-            themeIcon.className = "fa-solid fa-sun";
-        } else {
-            document.body.classList.add("light-theme");
-            document.body.classList.remove("dark-theme");
-            themeIcon.className = "fa-solid fa-moon";
-        }
-    }
-
-    function toggleTheme() {
-        if (document.body.classList.contains("dark-theme")) {
-            document.body.classList.remove("dark-theme");
-            document.body.classList.add("light-theme");
-            themeIcon.className = "fa-solid fa-moon";
-        } else {
-            document.body.classList.remove("light-theme");
-            document.body.classList.add("dark-theme");
-            themeIcon.className = "fa-solid fa-sun";
-        }
-    }
 
     // Map logic
     function initMap() {
@@ -149,10 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const isFlex = isFlexibleCancellation(item.cancelacion);
 
             // Search query
-            const matchesSearch = item.hospedaje.toLowerCase().includes(filterSearch.toLowerCase()) || 
-                                  item.direccion.toLowerCase().includes(filterSearch.toLowerCase()) ||
-                                  item.opcion.toLowerCase().includes(filterSearch.toLowerCase());
-            
+            const matchesSearch = item.hospedaje.toLowerCase().includes(filterSearch.toLowerCase()) ||
+                item.direccion.toLowerCase().includes(filterSearch.toLowerCase()) ||
+                item.opcion.toLowerCase().includes(filterSearch.toLowerCase());
+
             // Price Filter
             const matchesPrice = priceVal <= filterMaxPrice;
 
@@ -289,8 +262,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Filter days
-        const daysToRender = activeDayFilter === "all" 
-            ? Object.keys(daysMap) 
+        const daysToRender = activeDayFilter === "all"
+            ? Object.keys(daysMap)
             : [activeDayFilter];
 
         if (daysToRender.length === 0) {
@@ -332,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (pt.viability) {
                     viabilityHtml = `
                         <div class="viability-details" style="${isSelected ? 'display: block;' : 'display: none;'}">
-                            <div class="viability-section-title"><i class="fa-solid fa-circle-info"></i> Viabilidad y Consejos</div>
+                            <div class="viability-section-title"><i class="fa-solid fa-circle-info"></i> A tener en cuenta</div>
                             <div class="viability-grid">
                                 ${pt.viability.horario ? `<div class="viability-item"><strong>Horario:</strong> ${pt.viability.horario}</div>` : ''}
                                 ${pt.viability.tarifas ? `<div class="viability-item"><strong>Tarifa:</strong> ${pt.viability.tarifas}</div>` : ''}
@@ -545,9 +518,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const isFlex = isFlexibleCancellation(item.cancelacion);
 
                 // Apply current filters to map markers too
-                const matchesSearch = item.hospedaje.toLowerCase().includes(filterSearch.toLowerCase()) || 
-                                      item.direccion.toLowerCase().includes(filterSearch.toLowerCase()) ||
-                                      item.opcion.toLowerCase().includes(filterSearch.toLowerCase());
+                const matchesSearch = item.hospedaje.toLowerCase().includes(filterSearch.toLowerCase()) ||
+                    item.direccion.toLowerCase().includes(filterSearch.toLowerCase()) ||
+                    item.opcion.toLowerCase().includes(filterSearch.toLowerCase());
                 const matchesPrice = priceVal <= filterMaxPrice;
                 const matchesSite = filterSite === "all" || item.sitio.toLowerCase() === filterSite.toLowerCase();
                 let matchesBeds = true;
@@ -562,9 +535,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (matchesSearch && matchesPrice && matchesSite && matchesBeds && matchesCancel) {
                     const markerId = `lodging-${item.opcion}`;
                     const isActive = markerId === activeMarkerId;
-                    
+
                     const markerHtml = `<div class="custom-marker lodging ${isActive ? 'active-marker' : ''}"><i class="fa-solid fa-house"></i></div>`;
-                    
+
                     const icon = L.divIcon({
                         html: markerHtml,
                         className: '',
@@ -572,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
 
                     const marker = L.marker([item.lat, item.lng], { icon: icon });
-                    
+
                     // Bind beautiful popup
                     const popupContent = `
                         <div class="popup-container">
@@ -600,7 +573,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
 
                     marker.bindPopup(popupContent, { maxWidth: 280 });
-                    
+
                     marker.on("click", () => {
                         handleMarkerClick(markerId, [item.lat, item.lng]);
                     });
@@ -612,17 +585,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             });
-        } 
-        
+        }
+
         // 2. Tourist Points Map Markers
         if (activeTab === "itinerary" || showBothOnMap) {
             PUNTOS_TURISTICOS.forEach(pt => {
                 if (activeDayFilter === "all" || pt.dia === parseInt(activeDayFilter)) {
                     const markerId = `tourist-${pt.id}`;
                     const isActive = markerId === activeMarkerId;
-                    
+
                     const markerHtml = `<div class="custom-marker tourist ${isActive ? 'active-marker' : ''}"><i class="fa-solid fa-star"></i></div>`;
-                    
+
                     const icon = L.divIcon({
                         html: markerHtml,
                         className: '',
@@ -630,7 +603,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
 
                     const marker = L.marker([pt.lat, pt.lng], { icon: icon });
-                    
+
                     const popupContent = `
                         <div class="popup-container">
                             <div class="popup-header">
@@ -639,8 +612,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                             <div class="popup-title">${pt.nombre}</div>
                             <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 8px 0;">${pt.descripcion}</p>
-                            <button class="btn-primary popup-detail-btn" style="width:100%; justify-content:center; padding:4px 0; font-size:11px;" data-id="${pt.id}">
-                                Ver Detalles y Fotos <i class="fa-solid fa-expand"></i>
+                            <button class="btn-primary popup-detail-btn" style="width:100%; justify-content:center; padding:4px 0; font-size:11px;" onclick="window.openAttractionModal('${pt.id}')">
+                                Ver Detalles <i class="fa-solid fa-expand"></i>
                             </button>
                         </div>
                     `;
@@ -649,16 +622,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     marker.on("click", () => {
                         handleMarkerClick(markerId, [pt.lat, pt.lng]);
-                    });
-
-                    marker.on("popupopen", () => {
-                        const btn = document.querySelector(`.popup-detail-btn[data-id="${pt.id}"]`);
-                        if (btn) {
-                            btn.addEventListener("click", (e) => {
-                                e.stopPropagation();
-                                openModal(pt);
-                            });
-                        }
                     });
 
                     markersGroup.addLayer(marker);
@@ -674,7 +637,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const dayPoints = PUNTOS_TURISTICOS
                     .filter(pt => pt.dia === parseInt(activeDayFilter))
                     .map(pt => [pt.lat, pt.lng]);
-                
+
                 if (dayPoints.length > 1) {
                     const polyline = L.polyline(dayPoints, {
                         color: 'var(--color-tourist)',
@@ -691,7 +654,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handles clicking on a marker (synchronizes listing list highlight)
     function handleMarkerClick(id, coords) {
         activeMarkerId = id;
-        
+
         // Highlight active marker class in DOM
         updateMapMarkers();
 
@@ -716,7 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Programmatically focus a marker (e.g. from clicking a listing card)
     function focusMarker(id, coords) {
         activeMarkerId = id;
-        
+
         // Render lists to apply selected classes
         if (activeTab === "lodgings") {
             renderLodgings();
@@ -733,8 +696,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Setup interactive event listeners
     function setupEventListeners() {
-        // Theme button click
-        themeToggleBtn.addEventListener("click", toggleTheme);
 
         // Sidebar tabs switching
         tabBtns.forEach(btn => {
@@ -831,9 +792,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 toggleBothIcon.classList.add("fa-toggle-off");
                 toggleBothIcon.style.color = "var(--text-muted)";
             }
-            
+
             updateMapMarkers();
-            
+
             if (showBothOnMap) {
                 map.setView([41.396, 2.170], 13, { animate: true });
             } else {
@@ -857,6 +818,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 closeModal();
             }
         });
+
+        // Budget Overlay event listeners
+        const btnBudget = document.getElementById("btn-budget");
+        const closeBudgetBtn = document.getElementById("close-budget-btn");
+        const budgetView = document.getElementById("budget-view");
+
+        if (btnBudget && closeBudgetBtn && budgetView) {
+            btnBudget.addEventListener("click", () => {
+                budgetView.classList.remove("hidden");
+                renderBudgetList();
+            });
+
+            closeBudgetBtn.addEventListener("click", () => {
+                budgetView.classList.add("hidden");
+            });
+        }
     }
 
     // Auto-fit map viewport to show all selected itinerary points
@@ -870,5 +847,117 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const bounds = L.latLngBounds(pts.map(pt => [pt.lat, pt.lng]));
         map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+    }
+
+    // Expose openModal to window for popup links
+    window.openAttractionModal = function (id) {
+        const pt = PUNTOS_TURISTICOS.find(p => p.id === id);
+        if (pt) openModal(pt);
+    };
+
+    // Budget Logic
+    function renderBudgetList() {
+        const listContainer = document.getElementById('budget-list');
+        listContainer.innerHTML = '';
+        
+        let savedSelections = {};
+        try {
+            const saved = localStorage.getItem('budgetSelections');
+            if (saved) savedSelections = JSON.parse(saved);
+        } catch(e) {}
+        
+        PUNTOS_TURISTICOS.forEach(pt => {
+            // Se asume que BUDGET_DATA está cargado globalmente desde budget_data.js
+            const data = typeof BUDGET_DATA !== "undefined" ? BUDGET_DATA[pt.id] : null;
+            if (!data) return; 
+            
+            const selection = savedSelections[pt.id] || { checked: true, option: 0 };
+            
+            const itemDiv = document.createElement('div');
+            itemDiv.className = `budget-item ${selection.checked ? '' : 'disabled'}`;
+            itemDiv.dataset.id = pt.id;
+            
+            let optionsHtml = '';
+            if (data.options.length > 1) {
+                optionsHtml = `<select class="budget-select">`;
+                data.options.forEach((opt, idx) => {
+                    const selected = idx === selection.option ? 'selected' : '';
+                    optionsHtml += `<option value="${idx}" ${selected}>${opt.name}</option>`;
+                });
+                optionsHtml += `</select>`;
+            } else {
+                optionsHtml = `<span style="font-size: 0.9rem; color: var(--text-muted);">${data.options[0].name}</span>`;
+            }
+            
+            itemDiv.innerHTML = `
+                <input type="checkbox" class="budget-item-checkbox" ${selection.checked ? 'checked' : ''}>
+                <div class="budget-item-details">
+                    <h4>${pt.nombre}</h4>
+                    <p>Día ${pt.dia} - ${pt.tiempo}</p>
+                </div>
+                <div class="budget-item-controls">
+                    ${optionsHtml}
+                    <div class="budget-item-price">€ 0.00</div>
+                </div>
+            `;
+            
+            const checkbox = itemDiv.querySelector('.budget-item-checkbox');
+            checkbox.addEventListener('change', calculateBudgetTotal);
+            
+            const select = itemDiv.querySelector('.budget-select');
+            if (select) {
+                select.addEventListener('change', calculateBudgetTotal);
+            }
+            
+            listContainer.appendChild(itemDiv);
+        });
+        
+        calculateBudgetTotal();
+    }
+
+    function calculateBudgetTotal() {
+        let total = 0;
+        const listItems = document.querySelectorAll('.budget-item');
+        const selections = {};
+        
+        listItems.forEach(item => {
+            const id = item.dataset.id;
+            const checkbox = item.querySelector('.budget-item-checkbox');
+            const select = item.querySelector('.budget-select');
+            const data = BUDGET_DATA[id];
+            
+            if (!data) return;
+            
+            const optionIndex = select ? parseInt(select.value) : 0;
+            const isChecked = checkbox.checked;
+            
+            selections[id] = { checked: isChecked, option: optionIndex };
+            
+            if (isChecked) {
+                item.classList.remove('disabled');
+                const opt = data.options[optionIndex];
+                let itemTotal = 0;
+                
+                if (opt.isFamilyPrice) {
+                    itemTotal = opt.priceAdult; // Precio globar para toda la familia (ej. Free Tour)
+                } else {
+                    const priceAdult = opt.priceAdult || 0;
+                    const price14 = opt.price14 !== undefined ? opt.price14 : priceAdult;
+                    const price11 = opt.price11 !== undefined ? opt.price11 : priceAdult;
+                    const price8 = opt.price8 !== undefined ? opt.price8 : priceAdult;
+                    
+                    itemTotal = (priceAdult * 2) + price14 + price11 + price8;
+                }
+                
+                total += itemTotal;
+                item.querySelector('.budget-item-price').textContent = `€ ${itemTotal.toFixed(2)}`;
+            } else {
+                item.classList.add('disabled');
+                item.querySelector('.budget-item-price').textContent = `€ 0.00`;
+            }
+        });
+        
+        document.getElementById('budget-total-value').textContent = `€ ${total.toFixed(2)}`;
+        localStorage.setItem('budgetSelections', JSON.stringify(selections));
     }
 });
