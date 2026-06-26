@@ -13,10 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const cancelSelect = document.getElementById("filter-cancel");
     const sortBySelect = document.getElementById("sort-by");
     const dayBtns = document.querySelectorAll(".day-selector-btn");
+    const toggleBothBtn = document.getElementById("toggle-both-btn");
+    const toggleBothIcon = document.getElementById("toggle-both-icon");
     
     const lodgingCountBadge = document.getElementById("lodging-count");
     const lodgingsListContainer = document.getElementById("lodgings-list");
     const itineraryListContainer = document.getElementById("itinerary-list");
+
+    // Modal UI Elements
+    const attractionModal = document.getElementById("attraction-modal");
+    const modalCloseBtn = document.getElementById("modal-close");
+    const modalDayBadge = document.getElementById("modal-day-badge");
+    const modalTimeSpan = document.getElementById("modal-time").querySelector("span");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalViabilityText = document.getElementById("modal-viability-text");
+    const modalMapsLink = document.getElementById("modal-maps-link");
 
     // Map Variable
     let map;
@@ -32,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let filterSearch = "";
     let sortOrder = "opcion";
     let activeDayFilter = "all";
+    let showBothOnMap = false;
 
     // Initialize Application
     initTheme();
@@ -39,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupEventListeners();
     renderLodgings();
     renderItinerary();
+    renderViabilityList();
     updateMapMarkers();
 
     // Theme logic
@@ -301,20 +315,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
             points.forEach(pt => {
                 const ptCard = document.createElement("div");
-                ptCard.className = `tourist-card ${activeMarkerId === `tourist-${pt.id}` ? 'selected' : ''}`;
+                const isSelected = activeMarkerId === `tourist-${pt.id}`;
+                ptCard.className = `tourist-card ${isSelected ? 'selected' : ''} ${pt.isFreeTour ? 'free-tour-card' : ''}`;
                 ptCard.id = `card-tourist-${pt.id}`;
+
+                let freeTourBadge = "";
+                if (pt.isFreeTour) {
+                    freeTourBadge = `
+                        <div class="free-tour-tag">
+                            <i class="fa-solid fa-flag"></i> Free Tour
+                        </div>
+                    `;
+                }
+
+                let viabilityHtml = "";
+                if (pt.viability) {
+                    viabilityHtml = `
+                        <div class="viability-details" style="${isSelected ? 'display: block;' : 'display: none;'}">
+                            <div class="viability-section-title"><i class="fa-solid fa-circle-info"></i> Viabilidad y Consejos</div>
+                            <div class="viability-grid">
+                                ${pt.viability.horario ? `<div class="viability-item"><strong>Horario:</strong> ${pt.viability.horario}</div>` : ''}
+                                ${pt.viability.tarifas ? `<div class="viability-item"><strong>Tarifa:</strong> ${pt.viability.tarifas}</div>` : ''}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                let detailBtnHtml = `
+                    <button class="btn-primary detail-modal-btn" style="margin-top: 8px; width: 100%; justify-content: center; background-color: var(--accent-color);" onclick="event.stopPropagation();">
+                        Ver Detalles <i class="fa-solid fa-expand"></i>
+                    </button>
+                `;
 
                 ptCard.innerHTML = `
                     <div class="tourist-header">
-                        <div class="tourist-title">${pt.nombre}</div>
+                        <div class="tourist-title-container">
+                            <div class="tourist-title">${pt.nombre}</div>
+                            ${freeTourBadge}
+                        </div>
                         <span class="time-badge"><i class="fa-regular fa-clock"></i> ${pt.tiempo}</span>
                     </div>
                     <div class="tourist-desc">${pt.descripcion}</div>
+                    ${viabilityHtml}
+                    ${detailBtnHtml}
                 `;
 
                 ptCard.addEventListener("click", () => {
                     focusMarker(`tourist-${pt.id}`, [pt.lat, pt.lng]);
                 });
+
+                // Attach modal click event
+                const modalBtn = ptCard.querySelector(".detail-modal-btn");
+                if (modalBtn) {
+                    modalBtn.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        openModal(pt);
+                    });
+                }
 
                 daySection.appendChild(ptCard);
             });
@@ -323,12 +380,165 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Modal Control Functions
+    function openModal(pt) {
+        modalDayBadge.textContent = `Día ${pt.dia}`;
+        modalTimeSpan.textContent = pt.tiempo;
+        modalTitle.textContent = pt.nombre;
+        modalDescription.textContent = pt.descripcion;
+
+        // Set full viability paragraph text
+        modalViabilityText.textContent = pt.viability_full || "Información de acceso libre y de libre tránsito.";
+
+        // Set Google Maps link
+        if (pt.maps_link) {
+            modalMapsLink.href = pt.maps_link;
+            modalMapsLink.style.display = "flex";
+        } else {
+            modalMapsLink.href = "#";
+            modalMapsLink.style.display = "none";
+        }
+
+        attractionModal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Disable background scrolling
+    }
+
+    function closeModal() {
+        attractionModal.style.display = "none";
+        document.body.style.overflow = ""; // Enable background scrolling
+    }
+
+    // Render general viability panel content
+    function renderViabilityList() {
+        const container = document.getElementById("viability-list");
+        container.innerHTML = `
+            <div class="viability-category">
+                <div class="category-title"><i class="fa-solid fa-ticket"></i> Entradas Anticipadas Críticas</div>
+                
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
+                        <span class="monument-name">Basílica de la Sagrada Familia</span>
+                        <span class="warning-badge">3-4 semanas antes</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> €26.00 a €40.00 online. No hay venta física en taquillas.</p>
+                        <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Torres:</strong> Descenso por escalera de caracol muy estrecha. No recomendado con movilidad reducida, vértigo o claustrofobia.</p>
+                    </div>
+                </div>
+
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
+                        <span class="monument-name">Park Güell (Zona Monumental)</span>
+                        <span class="warning-badge">2-3 semanas antes</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> €18.00 general | €13.50 niños/mayores.</p>
+                        <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Aviso:</strong> Acceso a primera hora (9:30 am) ideal para evitar calor y masas. Retraso máximo tolerado: 30 minutos.</p>
+                    </div>
+                </div>
+
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
+                        <span class="monument-name">Casa Batlló</span>
+                        <span class="info-badge">Comprar Online</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> Desde €29.00 online. Taquilla física tiene recargo de €4.00 a €15.00.</p>
+                        <p><strong>Consejo:</strong> Audioguía de realidad aumentada interactiva excelente para niños. Gaudí Cube inmersivo incluido.</p>
+                    </div>
+                </div>
+
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
+                        <span class="monument-name">La Pedrera (Casa Milà)</span>
+                        <span class="info-badge">Comprar Online</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> €25.00 diurno | €39.00 nocturno.</p>
+                        <p><strong>Consejo:</strong> Visita de tarde (luego de las 18:00 hs) ofrece la iluminación más espectacular para fotografías en la azotea.</p>
+                    </div>
+                </div>
+
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
+                        <span class="monument-name">Barça Immersive Tour</span>
+                        <span class="info-badge">Comprar Online</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> €28.00 básico online. En taquilla física o reventas sube a €34.00-€36.00.</p>
+                        <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Obras Camp Nou:</strong> El estadio está en reconstrucción y cerrado. No se visitan gradas ni vestuarios, solo la sala interactiva, museo y mirador de obras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viability-category">
+                <div class="category-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--color-hoteles);"></i> Alertas Logísticas Críticas</div>
+                
+                <div class="viability-card alert-card">
+                    <div class="card-title-sec">
+                        <span class="alert-title-text"><i class="fa-solid fa-circle-xmark"></i> Laberinto de Horta en Restauración</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p>Bajo plan de restauración botánica severa <strong>hasta el primer trimestre de 2026</strong>. El laberinto de cipreses está cerrado. Jardines perimetrales parcialmente transitables. Entrada general €2.50 (gratis dom/mié).</p>
+                    </div>
+                </div>
+
+                <div class="viability-card alert-card">
+                    <div class="card-title-sec">
+                        <span class="alert-title-text"><i class="fa-solid fa-calendar-xmark"></i> Cierre Dominical de La Boquería</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p>El histórico mercado de Las Ramblas cierra de forma absoluta todos los domingos del año. El itinerario sitúa la visita en viernes para asegurar la experiencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viability-category">
+                <div class="category-title"><i class="fa-solid fa-circle-info"></i> Teleféricos de Montjuïc: ¡No Confundirlos!</div>
+                <div class="viability-card info-card">
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div class="teleferico-item">
+                            <span class="teleferico-name"><i class="fa-solid fa-cable-car"></i> 1. Teleférico de Montjuïc (TMB - Público)</span>
+                            <p style="font-size:11px; margin-top:2px; color:var(--text-muted);">Sube la ladera desde el Funicular hasta el Castillo. Cabinas de 8 pasajeros sentados. 100% adaptado a cochecitos y movilidad reducida. Admite compra online. (€17.10 ida/vuelta).</p>
+                        </div>
+                        <div class="teleferico-item" style="border-top:1px solid var(--border-color); padding-top:8px;">
+                            <span class="teleferico-name"><i class="fa-solid fa-cable-car" style="color:var(--color-airbnb);"></i> 2. Transbordador Aeri del Port (Privado)</span>
+                            <p style="font-size:11px; margin-top:2px; color:var(--text-muted);">Cruza el mar desde la Barceloneta hasta Miramar. Cabinas de pie de 20 personas. <strong>No adaptado</strong>. Compra exclusivamente en taquilla física en el día. (€12.50 ida / €20.00 ida/vuelta).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viability-category" style="margin-bottom:20px;">
+                <div class="category-title"><i class="fa-solid fa-person-hiking"></i> Enlaces Reservas Free Tours (Civitatis)</div>
+                <div class="viability-card info-card" style="display:flex; flex-direction:column; gap:10px; padding: 12px;">
+                    <a href="https://www.civitatis.com/ar/barcelona/free-tour-barcelona/" target="_blank" class="free-tour-link-item">
+                        <span><i class="fa-solid fa-location-dot"></i> Free Tour Barcelona (Centro) - 2 hs</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                    <a href="https://www.civitatis.com/ar/barcelona/free-tour-born/#detalles" target="_blank" class="free-tour-link-item">
+                        <span><i class="fa-solid fa-location-dot"></i> Free Tour Born / Gótico - 2 hs</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                    <a href="https://www.civitatis.com/ar/barcelona/free-tour-park-guell/" target="_blank" class="free-tour-link-item">
+                        <span><i class="fa-solid fa-location-dot"></i> Free Tour Parque Güell - 1.5 hs</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                    <a href="https://www.civitatis.com/ar/barcelona/free-tour-parque-ciudadela-barceloneta/#detalles" target="_blank" class="free-tour-link-item">
+                        <span><i class="fa-solid fa-location-dot"></i> Free Tour Ciudadela - Barceloneta - 2 hs</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+
     // Update map markers based on selected tab and filters
     function updateMapMarkers() {
         markersGroup.clearLayers();
 
         // 1. Lodgings Map Markers
-        if (activeTab === "lodgings") {
+        if (activeTab === "lodgings" || showBothOnMap) {
             HOSPEDAJES.forEach(item => {
                 const priceVal = parsePrice(item.importe);
                 const bedsVal = getBedsCount(item.camas);
@@ -405,7 +615,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } 
         
         // 2. Tourist Points Map Markers
-        else if (activeTab === "itinerary") {
+        if (activeTab === "itinerary" || showBothOnMap) {
             PUNTOS_TURISTICOS.forEach(pt => {
                 if (activeDayFilter === "all" || pt.dia === parseInt(activeDayFilter)) {
                     const markerId = `tourist-${pt.id}`;
@@ -428,7 +638,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="time-badge">${pt.tiempo}</span>
                             </div>
                             <div class="popup-title">${pt.nombre}</div>
-                            <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 0 0;">${pt.descripcion}</p>
+                            <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 8px 0;">${pt.descripcion}</p>
+                            <button class="btn-primary popup-detail-btn" style="width:100%; justify-content:center; padding:4px 0; font-size:11px;" data-id="${pt.id}">
+                                Ver Detalles y Fotos <i class="fa-solid fa-expand"></i>
+                            </button>
                         </div>
                     `;
 
@@ -436,6 +649,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     marker.on("click", () => {
                         handleMarkerClick(markerId, [pt.lat, pt.lng]);
+                    });
+
+                    marker.on("popupopen", () => {
+                        const btn = document.querySelector(`.popup-detail-btn[data-id="${pt.id}"]`);
+                        if (btn) {
+                            btn.addEventListener("click", (e) => {
+                                e.stopPropagation();
+                                openModal(pt);
+                            });
+                        }
                     });
 
                     markersGroup.addLayer(marker);
@@ -535,9 +758,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (activeTab === "lodgings") {
                     renderLodgings();
                     map.setView([41.396, 2.170], 13);
-                } else {
+                } else if (activeTab === "itinerary") {
                     renderItinerary();
                     fitMapToItinerary();
+                } else if (activeTab === "viability") {
+                    renderViabilityList();
+                    map.setView([41.396, 2.170], 12);
                 }
             });
         });
@@ -591,6 +817,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateMapMarkers();
                 fitMapToItinerary();
             });
+        });
+
+        // Toggle both map markers button
+        toggleBothBtn.addEventListener("click", () => {
+            showBothOnMap = !showBothOnMap;
+            if (showBothOnMap) {
+                toggleBothIcon.classList.remove("fa-toggle-off");
+                toggleBothIcon.classList.add("fa-toggle-on");
+                toggleBothIcon.style.color = "var(--color-primary)";
+            } else {
+                toggleBothIcon.classList.remove("fa-toggle-on");
+                toggleBothIcon.classList.add("fa-toggle-off");
+                toggleBothIcon.style.color = "var(--text-muted)";
+            }
+            
+            updateMapMarkers();
+            
+            if (showBothOnMap) {
+                map.setView([41.396, 2.170], 13, { animate: true });
+            } else {
+                if (activeTab === "lodgings") {
+                    map.setView([41.396, 2.170], 13, { animate: true });
+                } else {
+                    fitMapToItinerary();
+                }
+            }
+        });
+
+        // Modal event listeners
+        modalCloseBtn.addEventListener("click", closeModal);
+        window.addEventListener("click", (e) => {
+            if (e.target === attractionModal) {
+                closeModal();
+            }
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && attractionModal.style.display === "flex") {
+                closeModal();
+            }
         });
     }
 

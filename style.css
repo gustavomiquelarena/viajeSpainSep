@@ -851,3 +851,441 @@ h1, h2, h3, .logo-area h1 {
         padding: 8px 12px;
     }
 }
+
+/* --- Free Walking Tours Highlight --- */
+.free-tour-card {
+    border-left: 4px solid #06b6d4 !important;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.free-tour-card:hover {
+    border-color: #06b6d4 !important;
+}
+
+.tourist-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.free-tour-tag {
+    align-self: flex-start;
+    background-color: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* --- Viability Specific Details Accordion --- */
+.viability-details {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-color);
+    animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.viability-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.viability-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.viability-item {
+    font-size: 12px;
+    color: var(--text-main);
+    line-height: 1.4;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.viability-item strong {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.viability-item.advice {
+    border-left: 3px solid var(--color-success);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.viability-item.advice strong {
+    color: var(--color-success);
+}
+
+.viability-item.alert {
+    border-left: 3px solid var(--color-hoteles);
+    background: rgba(211, 47, 47, 0.08);
+}
+
+.viability-item.alert strong {
+    color: var(--color-hoteles);
+}
+
+.free-tour-btn {
+    width: 100%;
+    justify-content: center;
+    background-color: #06b6d4;
+    margin-top: 8px;
+}
+
+.free-tour-btn:hover {
+    background-color: #0891b2;
+}
+
+/* --- Viability Tab General Panel --- */
+.viability-category {
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+.viability-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.viability-card.alert-card {
+    border-left: 4px solid var(--color-hoteles);
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.03) 0%, var(--bg-card) 100%);
+}
+
+.viability-card.info-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.card-title-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.monument-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.alert-title-text {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-hoteles);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.warning-badge {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--color-tourist);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.info-badge {
+    background-color: var(--bg-badge);
+    color: var(--accent-color);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.card-body-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-body-sec p {
+    font-size: 12px;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.warning-text {
+    color: var(--color-tourist) !important;
+    font-size: 11.5px !important;
+    background: rgba(245, 158, 11, 0.08);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.teleferico-item {
+    font-size: 12px;
+}
+
+.teleferico-name {
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.free-tour-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.free-tour-link-item:hover {
+    border-color: #06b6d4;
+    background: rgba(6, 182, 212, 0.05);
+    color: #06b6d4;
+}
+
+.free-tour-link-item i {
+    font-size: 11px;
+}
+
+/* --- Attraction Details Modal (Popup) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: fadeInModal 0.2s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideUpModal 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUpModal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+.modal-close-btn:hover {
+    background: var(--color-hoteles);
+    border-color: var(--color-hoteles);
+    transform: scale(1.1);
+}
+
+.modal-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.modal-image-container:hover img {
+    transform: scale(1.05);
+}
+
+.modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-header-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-section h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-description-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+.viability-text-container {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 14px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+    margin-top: 8px;
+}
+
+body.light-theme .viability-text-container {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+#modal-viability-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0;
+    white-space: pre-line;
+}
+
+.modal-footer-sec {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.modal-footer-sec .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.modal-footer-sec .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}

@@ -47,6 +47,9 @@
                 <button id="tab-itinerary" class="tab-btn" data-tab="itinerary">
                     <i class="fa-solid fa-calendar-days"></i> Itinerario <span class="badge">5 Días</span>
                 </button>
+                <button id="tab-viability" class="tab-btn" data-tab="viability">
+                    <i class="fa-solid fa-circle-exclamation"></i> Consejos
+                </button>
             </nav>
 
             <!-- Content Area -->
@@ -116,9 +119,6 @@
 
                 <!-- ITINERARY TAB -->
                 <div id="panel-itinerary" class="tab-panel">
-                    <div class="itinerary-intro">
-                        <p><i class="fa-solid fa-circle-info"></i> Recorrido pensado para familia con 3 niños (8, 11 y 14 años). Haz clic en las actividades para ver su ubicación en el mapa.</p>
-                    </div>
                     
                     <!-- Days Filter Selector -->
                     <div class="days-selector">
@@ -133,6 +133,19 @@
                     <!-- Itinerary list -->
                     <div class="list-container" id="itinerary-list">
                         <!-- Itinerary days will render here -->
+                    </div>
+                </div>
+
+                <!-- VIABILITY TAB -->
+                <div id="panel-viability" class="tab-panel">
+                    <div class="itinerary-intro">
+                        <p style="font-weight: 600; font-size: 13px; color: var(--accent-color);">
+                            <i class="fa-solid fa-circle-exclamation"></i> Cuestiones Críticas a Tener Presente
+                        </p>
+                        <p style="margin-top: 4px;">Información recopilada de viabilidad turística, reservas de entradas, aforos y alertas operativas para Barcelona.</p>
+                    </div>
+                    <div class="list-container" id="viability-list" style="padding-top: 0;">
+                        <!-- Viability content renders here -->
                     </div>
                 </div>
             </div>
@@ -153,8 +166,45 @@
                     <span class="legend-marker marker-tourist"><i class="fa-solid fa-star"></i></span>
                     <span>Punto Turístico</span>
                 </div>
+                <hr style="border:0; border-top:1px solid var(--border-color); margin: 10px 0;">
+                <div class="legend-item" style="cursor: pointer; display: flex; align-items: center;" id="toggle-both-btn">
+                    <i class="fa-solid fa-toggle-off" id="toggle-both-icon" style="font-size:1.2rem; color:var(--text-muted); margin-right:8px; transition: color 0.3s;"></i>
+                    <span style="font-size:0.85rem; font-weight:600;">Mostrar Ambos</span>
+                </div>
             </div>
         </main>
+    </div>
+
+    <!-- Attraction Detail Modal -->
+    <div id="attraction-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content glass-effect">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div class="modal-body">
+                <div class="modal-header-sec">
+                    <span id="modal-day-badge" class="option-badge"></span>
+                    <span id="modal-time" class="time-badge"><i class="fa-regular fa-clock"></i> <span></span></span>
+                </div>
+                <h2 id="modal-title"></h2>
+                
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-align-left"></i> Descripción y Actividades</h3>
+                    <p id="modal-description" class="modal-description-text"></p>
+                </div>
+                
+                <div class="modal-section viability-section">
+                    <h3><i class="fa-solid fa-clipboard-check"></i> Información de Viabilidad</h3>
+                    <div class="viability-text-container" style="background: rgba(255, 255, 255, 0.04); padding: 14px; border-radius: 8px; border-left: 4px solid var(--accent-color); margin-top: 8px;">
+                        <p id="modal-viability-text" style="font-size: 13.5px; line-height: 1.6; color: var(--text-main); margin: 0; white-space: pre-line;"></p>
+                    </div>
+                </div>
+
+                <div class="modal-footer-sec" style="margin-top: 10px; display: flex; gap: 10px;">
+                    <a id="modal-maps-link" href="" target="_blank" class="btn-primary" style="background-color: var(--accent-color); text-align: center; justify-content: center; text-decoration: none; width: 100%;">
+                        <i class="fa-solid fa-map-location-dot"></i> Ver ubicación en Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Leaflet JS -->
