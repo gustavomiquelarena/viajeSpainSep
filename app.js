@@ -589,6 +589,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 2. Tourist Points Map Markers
         if (activeTab === "itinerary" || showBothOnMap) {
+            
+            // Draw confirmed accommodation permanently on map
+            const baseLodging = HOSPEDAJES.find(h => h.opcion === "12");
+            if (baseLodging) {
+                const markerId = `base-lodging`;
+                const isActive = markerId === activeMarkerId;
+                const markerHtml = `<div class="custom-marker base-accommodation ${isActive ? 'active-marker' : ''}"><i class="fa-solid fa-house"></i></div>`;
+                const icon = L.divIcon({ html: markerHtml, className: '', iconSize: [32, 32] });
+                const marker = L.marker([baseLodging.lat, baseLodging.lng], { icon: icon, zIndexOffset: 1000 });
+                const popupContent = `
+                    <div class="popup-container">
+                        <div class="popup-header">
+                            <span class="option-badge" style="background:#fbbf24; color:black;">Base de Operaciones</span>
+                        </div>
+                        <div class="popup-title">Alojamiento Confirmado:<br>${baseLodging.hospedaje}</div>
+                        <div class="popup-address">${baseLodging.direccion}</div>
+                        <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 8px 0;">Base de operaciones para el viaje.<br><a href="${baseLodging.link}" target="_blank" style="color:#2563eb; text-decoration:underline; font-weight:600;"><i class="fa-solid fa-link"></i> Ver en Booking</a></p>
+                    </div>
+                `;
+                marker.bindPopup(popupContent, { maxWidth: 280 });
+                marker.on("click", () => { handleMarkerClick(markerId, [baseLodging.lat, baseLodging.lng]); });
+                markersGroup.addLayer(marker);
+                if (isActive) marker.openPopup();
+            }
+
             PUNTOS_TURISTICOS.forEach(pt => {
                 if (activeDayFilter === "all" || pt.dia === parseInt(activeDayFilter)) {
                     const markerId = `tourist-${pt.id}`;

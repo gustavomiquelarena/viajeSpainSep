@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - Viaje España 2026</title>
+    <!-- Use a system font stack similar to Outlook/Microsoft -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Microsoft web font stack */
+            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #faf9f8;
+            color: #323130;
+            padding: 40px 20px;
+        }
+
+        .calendar-container {
+            background-color: #ffffff;
+            border: 1px solid #edebe9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #107c10;
+            /* Outlook dark green tone or neutral */
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: #0078d4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .back-btn:hover {
+            background-color: #f3f2f1;
+        }
+
+        .back-btn i {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-top: 1px solid #edebe9;
+            border-left: 1px solid #edebe9;
+        }
+
+        .day-header {
+            padding: 12px 10px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #605e5c;
+            border-right: 1px solid #edebe9;
+            border-bottom: 1px solid #edebe9;
+            text-align: left;
+        }
+
+        .day-cell {
+            min-height: 150px;
+            border-right: 1px solid #edebe9;
+            border-bottom: 1px solid #edebe9;
+            padding: 8px;
+            position: relative;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .day-cell.disabled {
+            background-color: #faf9f8;
+        }
+
+        .day-cell.disabled .date-number {
+            color: #a19f9d;
+        }
+
+        .date-number {
+            font-size: 14px;
+            font-weight: 400;
+            color: #323130;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date-number .icon {
+            color: #0078d4;
+            font-size: 14px;
+        }
+
+        /* Spanning Event Bars */
+        .event-bar {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .event-detail {
+            font-size: 11px;
+            line-height: 1.4;
+            color: #605e5c;
+            padding: 2px 4px;
+            margin-top: 2px;
+        }
+
+        /* Colored blocks */
+        .bg-flight {
+            background-color: #e1dfdd;
+            color: #323130;
+            border-left: 3px solid #605e5c;
+        }
+
+        .bg-bcn {
+            background-color: #dff6dd;
+            color: #107c10;
+        }
+
+        /* Outlook green */
+        .bg-transit {
+            background-color: #c7e0f4;
+            color: #0078d4;
+        }
+
+        .bg-park {
+            background-color: #fce100;
+            color: #8e562e;
+            border-left: 3px solid #d29200;
+        }
+
+        .bg-val {
+            background-color: #fde7e9;
+            color: #a4262c;
+        }
+
+        .bg-mad {
+            background-color: #e8d0fd;
+            color: #5c2d91;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calendar-container">
+        <div class="header">
+            <h1>Calendario - España Septiembre 2026</h1>
+            <a href="index.html" class="back-btn" title="Cerrar calendario"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <div class="calendar-grid">
+            <!-- Headers -->
+            <div class="day-header">Domingo</div>
+            <div class="day-header">Lunes</div>
+            <div class="day-header">Martes</div>
+            <div class="day-header">Miércoles</div>
+            <div class="day-header">Jueves</div>
+            <div class="day-header">Viernes</div>
+            <div class="day-header">Sábado</div>
+
+            <!-- Week 1: Sept 13 to Sept 19 -->
+            <div class="day-cell disabled">
+                <div class="date-number">13 Sep</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">14</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">15</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">16 <i class="fa-solid fa-plane icon"></i></div>
+                <div class="event-bar bg-flight"><i class="fa-solid fa-plane-departure"></i> Vuelo Internacional</div>
+                <div class="event-detail">11:50 Salida Mendoza (MDZ)<br>15:00 Vuelo a MAD</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">17 <i class="fa-solid fa-train icon"></i></div>
+                <div class="event-bar bg-transit"><i class="fa-solid fa-plane-arrival"></i> Llegada y Tránsito</div>
+                <div class="event-detail">08:00 Llegada MAD<br>18:00 Salida avión a BCN<br>Check-in alojamiento</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">18 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
+                <div class="event-detail"><b>Eje Histórico:</b> Gótico, Ramblas, Boquería, Born</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">19 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
+                <div class="event-detail"><b>Modernismo:</b> Park Güell, Tibidabo, Pedrera</div>
+            </div>
+
+            <!-- Week 2: Sept 20 to Sept 26 -->
+            <div class="day-cell">
+                <div class="date-number">20 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
+                <div class="event-detail"><b>Montjuïc:</b> Castillo, Laberinto, Fuente Mágica</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">21 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
+                <div class="event-detail"><b>Parques y Costa:</b> Ciudadela, Barceloneta, Batlló</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">22 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
+                <div class="event-detail"><b>Gaudí Esencial:</b> Sagrada Familia, Camp Nou</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">23 <i class="fa-solid fa-ticket icon"></i></div>
+                <div class="event-bar bg-park"><i class="fa-solid fa-roller-coaster"></i> PortAventura</div>
+                <div class="event-detail"><b>08:00</b> Alquiler de auto<br>Día en parque de diversiones</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">24 <i class="fa-solid fa-car icon"></i></div>
+                <div class="event-bar bg-transit"><i class="fa-solid fa-car"></i> BCN a VAL</div>
+                <div class="event-bar bg-val"><i class="fa-solid fa-location-dot"></i> Valencia</div>
+                <div class="event-detail">Traslado en auto (media mañana)<br>Tarde disponible en Valencia</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">25 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-val"><i class="fa-solid fa-location-dot"></i> Valencia</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+
+            <div class="day-cell">
+                <div class="date-number">26 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-val"><i class="fa-solid fa-location-dot"></i> Valencia</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <!-- Week 3: Sept 27 to Oct 3 -->
+            <div class="day-cell">
+                <div class="date-number">27 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-val"><i class="fa-solid fa-location-dot"></i> Valencia</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">28 <i class="fa-solid fa-train icon"></i></div>
+                <div class="event-bar bg-transit"><i class="fa-solid fa-train"></i> VAL a MAD</div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-detail">Traslado temprano en tren. Tarde en Madrid</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">29 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">30 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">1 Oct <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">2 <i class="fa-regular fa-building icon"></i></div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-detail">Itinerario pendiente por definir</div>
+            </div>
+
+            <div class="day-cell">
+                <div class="date-number">3 <i class="fa-solid fa-plane icon"></i></div>
+                <div class="event-bar bg-mad"><i class="fa-solid fa-location-dot"></i> Madrid</div>
+                <div class="event-bar bg-flight"><i class="fa-solid fa-plane-departure"></i> Salida a ARG</div>
+                <div class="event-detail">Libre hasta 15hs.<br>20:00 Vuelo internacional</div>
+            </div>
+
+            <!-- Week 4: Oct 4 to Oct 10 -->
+            <div class="day-cell">
+                <div class="date-number">4 <i class="fa-solid fa-house icon"></i></div>
+                <div class="event-bar bg-flight"><i class="fa-solid fa-plane-arrival"></i> Llegada a Casa</div>
+                <div class="event-detail">04:00 Llegada BUE<br>07:30 Vuelo a MDZ</div>
+            </div>
+
+            <div class="day-cell disabled">
+                <div class="date-number">5</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">6</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">7</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">8</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">9</div>
+            </div>
+            <div class="day-cell disabled">
+                <div class="date-number">10</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

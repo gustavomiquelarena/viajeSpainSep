@@ -1486,3 +1486,28 @@ body.light-theme .viability-text-container {
     font-weight: 800;
     color: var(--accent-color);
 }
+
+/* --- Base Accommodation Marker --- */
+.custom-marker.base-accommodation {
+    background-color: #2563eb !important; /* Azul */
+    border: 2px solid #fbbf24 !important; /* Dorado */
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+
+.custom-marker.base-accommodation i {
+    color: white !important;
+}
+
+.custom-marker.base-accommodation.active-marker {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.4) !important;
+}

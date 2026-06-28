@@ -303,6 +303,22 @@ const HOSPEDAJES = [
     "lat": 41.393,
     "lng": 2.165,
     "address_estimated": true
+  },
+  {
+    "opcion": "12",
+    "hospedaje": "EasySleep Gaudi Terrace",
+    "link": "https://www.booking.com/hotel/es/apartamentos-valencia-347.es.html?label=booking_confirmation-RR0VLY9%401779920205-mTpXWu%401780868010&sid=6e2b9068bb46364071ab5cdf9de1afb3&aid=964694&ucfs=1&checkin=2026-09-17&checkout=2026-09-23&dest_id=-372490&dest_type=city&group_adults=2&no_rooms=1&group_children=3&age=14&req_age=14&age=5&req_age=5&age=8&req_age=8&nflt=fc%3D2%3Bprice%3DUSD-min-320-1&srpvid=213d99800e630c22&srepoch=1782683484&matching_block_id=27277504_432109171_5_0_0&atlas_src=sr_iw_title",
+    "sitio": "Booking",
+    "direccion": "Valencia 347, Eixample, 08009 Barcelona",
+    "dorm": "TBD",
+    "banos": "TBD",
+    "camas": "TBD",
+    "calificacion": "8,7/10",
+    "importe": "USD 1.813",
+    "cancelacion": "Con política de cancelación",
+    "lat": 41.3980,
+    "lng": 2.1706,
+    "address_estimated": true
   }
 ];
 
