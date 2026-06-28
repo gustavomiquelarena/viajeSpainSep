@@ -859,6 +859,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 budgetView.classList.add("hidden");
             });
         }
+
+        // Master Plan Overlay event listeners
+        const btnMasterPlan = document.getElementById("btn-master-plan");
+        const closeMasterPlanBtn = document.getElementById("close-master-plan-btn");
+        const masterPlanView = document.getElementById("master-plan-view");
+
+        if (btnMasterPlan && closeMasterPlanBtn && masterPlanView) {
+            btnMasterPlan.addEventListener("click", () => {
+                masterPlanView.classList.remove("hidden");
+            });
+
+            closeMasterPlanBtn.addEventListener("click", () => {
+                masterPlanView.classList.add("hidden");
+            });
+        }
     }
 
     // Auto-fit map viewport to show all selected itinerary points

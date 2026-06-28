@@ -39,9 +39,9 @@
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-end;">
-                    <a href="calendario.html" class="header-action-btn" title="Ver Calendario General">
+                    <button id="btn-master-plan" class="header-action-btn" title="Ver Calendario General">
                         <i class="fa-solid fa-calendar-alt"></i> Master Plan
-                    </a>
+                    </button>
                     <button id="tab-viability" class="tab-btn header-action-btn" data-tab="viability" title="Consejos">
                         <i class="fa-solid fa-circle-exclamation"></i> Consejos
                     </button>
@@ -221,6 +221,19 @@
                         <i class="fa-solid fa-map-location-dot"></i> Ver ubicación en Google Maps
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MASTER PLAN MODAL -->
+    <div id="master-plan-view" class="budget-modal-backdrop hidden">
+        <div class="budget-modal-container" style="max-width: 1400px; width: 95%; height: 95%; padding: 0; display: flex; flex-direction: column;">
+            <div class="budget-header" style="padding: 15px 30px; border-bottom: 1px solid var(--border-color);">
+                <h2><i class="fa-solid fa-calendar-alt"></i> Master Plan del Viaje</h2>
+                <button id="close-master-plan-btn" class="close-budget-btn"><i class="fa-solid fa-xmark"></i> Cerrar</button>
+            </div>
+            <div class="budget-content" style="padding: 0; flex-grow: 1; overflow: hidden; border-radius: 0 0 16px 16px;">
+                <iframe src="calendario.html?embedded=true" style="width: 100%; height: 100%; border: none;"></iframe>
             </div>
         </div>
     </div>

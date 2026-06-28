@@ -744,38 +744,127 @@ const PUNTOS_TURISTICOS = [
     "id": "t24",
     "dia": 4,
     "fecha": "21/9",
-    "nombre": "Arco del Triunfo y Parque de la Ciudadela",
-    "lat": 41.3903,
+    "nombre": "Arco del Triunfo",
+    "lat": 41.3910,
     "lng": 2.1806,
-    "tiempo": "09:30 - 11:00",
-    "descripcion": "Paseo matutino por el espacio público monumental.",
+    "tiempo": "09:30 - 10:00",
+    "descripcion": "Punto de encuentro e inicio del recorrido.",
     "imagen": "https://images.unsplash.com/photo-1545232979-8bf34eb9757b?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Arco+de+Triunfo+de+Barcelona",
     "viability": {
-      "horario": "8:00 - 22:30 hs | Arco 24 hs.",
+      "horario": "24 hs.",
       "tarifas": "Gratuito."
     },
-    "viability_full": "Parque de la Ciudadela y Arco del Triunfo:\n* Parque de la Ciudadela: Acceso libre y gratuito todos los días de 08:00 a 22:30. Alberga la cascada monumental, el estanque navegable y el Parlamento de Cataluña.\n* Arco del Triunfo: Situado en el paseo Lluís Companys, es transitable las 24 horas."
+    "viability_full": "Arco del Triunfo de Barcelona: punto de encuentro e inicio del recorrido. Fue construido como entrada principal de la Exposición Universal de 1888."
   },
   {
-    "id": "t25",
+    "id": "t24a",
     "dia": 4,
     "fecha": "21/9",
-    "nombre": "Civitatis: Free Tour Parque Ciudadela - Barceloneta",
-    "lat": 41.3903,
-    "lng": 2.1806,
-    "tiempo": "11:00 - 13:00",
-    "descripcion": "Duración fija de 2:00 hs finalizando en la zona litoral de la costa.",
-    "imagen": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
-    "isFreeTour": true,
-    "link": "https://www.civitatis.com/ar/barcelona/free-tour-parque-ciudadela-barceloneta/#detalles",
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Arco+de+Triunfo+de+Barcelona",
+    "nombre": "Jardines de la Ciudadela",
+    "lat": 41.3888,
+    "lng": 2.1849,
+    "tiempo": "10:00 - 10:30",
+    "descripcion": "Primer tramo del paseo. Ocupa antiguos terrenos de la fortaleza militar.",
+    "imagen": "https://images.unsplash.com/photo-1545232979-8bf34eb9757b?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Parc+de+la+Ciutadella",
     "viability": {
-      "horario": "Salidas a las 11:00 hs y 15:30 hs.",
-      "tarifas": "Free tour."
+      "horario": "08:00 - 22:30 hs.",
+      "tarifas": "Gratuito."
     },
-    "viability_full": "Free Tour Parque de la Ciudadela y Barceloneta:\n* Duración: 2 horas de recorrido a pie.\n* Horarios de Salida: A las 11:00 hs y a las 15:30 hs.\n* Enlace Oficial: https://www.civitatis.com/ar/barcelona/free-tour-parque-ciudadela-barceloneta/#detalles\n\nEl tour finaliza en la costa, facilitando la transición al almuerzo en el barrio marinero."
+    "viability_full": "Jardines del Parque de la Ciudadela: primer tramo del paseo tras atravesar el entorno del Arco del Triunfo."
+  },
+  {
+    "id": "t24b",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Invernaderos",
+    "lat": 41.3877,
+    "lng": 2.1839,
+    "tiempo": "10:30 - 11:00",
+    "descripcion": "Espacios botánicos decimonónicos y de plantas exóticas.",
+    "imagen": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hivernacle+Parc+de+la+Ciutadella",
+    "viability": {
+      "horario": "08:00 - 22:30 hs.",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Invernaderos de plantas exóticas y tropicales: espacios botánicos del parque que introducen el carácter ajardinado y decimonónico."
+  },
+  {
+    "id": "t24c",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Cascada Monumental",
+    "lat": 41.3881,
+    "lng": 2.1875,
+    "tiempo": "11:00 - 11:30",
+    "descripcion": "Diseñada por Josep Fontserè, parada clave para observar la monumentalidad.",
+    "imagen": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cascada+Monumental+Ciutadella",
+    "viability": {
+      "horario": "08:00 - 22:30 hs.",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Cascada Monumental: uno de los elementos más fotogénicos del parque. Fue diseñada por Josep Fontserè."
+  },
+  {
+    "id": "t24d",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Parlamento de Cataluña",
+    "lat": 41.3881,
+    "lng": 2.1889,
+    "tiempo": "11:30 - 12:00",
+    "descripcion": "Edificio de alto valor político e histórico en el centro del parque.",
+    "imagen": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Parlament+de+Catalunya",
+    "viability": {
+      "horario": "Consultar visitas",
+      "tarifas": "Gratuito exterior."
+    },
+    "viability_full": "Parlamento de Cataluña: edificio de alto valor político, militar e histórico, ideal para contextualizar la evolución institucional."
+  },
+  {
+    "id": "t24e",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Barceloneta",
+    "lat": 41.3807,
+    "lng": 2.1895,
+    "tiempo": "12:00 - 12:30",
+    "descripcion": "Etapa final del recorrido, tradición marinera y portuaria.",
+    "imagen": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Barceloneta+Barcelona",
+    "viability": {
+      "horario": "24 hs.",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Barrio de la Barceloneta: etapa final del recorrido, donde la ciudad se vincula directamente con el mar Mediterráneo."
+  },
+  {
+    "id": "t24f",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Frente marítimo",
+    "lat": 41.3833,
+    "lng": 2.1950,
+    "tiempo": "12:30 - 13:00",
+    "descripcion": "Legado olímpico de 1992 y gran transformación urbanística litoral.",
+    "imagen": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Port+Olimpic+Barcelona",
+    "viability": {
+      "horario": "24 hs.",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Frente marítimo y legado olímpico de 1992: cierre natural del paseo por la Barceloneta."
   },
   {
     "id": "t26",

@@ -348,6 +348,17 @@
         </div>
     </div>
 
+    <script>
+        if (window.location.search.includes('embedded=true')) {
+            const header = document.querySelector('.header');
+            if (header) header.style.display = 'none';
+            const container = document.querySelector('.calendar-container');
+            if (container) {
+                container.style.border = 'none';
+                container.style.boxShadow = 'none';
+            }
+            document.body.style.padding = '0';
+        }
+    </script>
 </body>
-
 </html>
