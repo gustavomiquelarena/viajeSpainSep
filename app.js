@@ -589,7 +589,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 2. Tourist Points Map Markers
         if (activeTab === "itinerary" || showBothOnMap) {
-            
+
             // Draw confirmed accommodation permanently on map
             const baseLodging = HOSPEDAJES.find(h => h.opcion === "12");
             if (baseLodging) {
@@ -601,7 +601,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const popupContent = `
                     <div class="popup-container">
                         <div class="popup-header">
-                            <span class="option-badge" style="background:#fbbf24; color:black;">Base de Operaciones</span>
+                            <span class="option-badge" style="background:#fbbf24; color:black;">Alojamiento</span>
                         </div>
                         <div class="popup-title">Alojamiento Confirmado:<br>${baseLodging.hospedaje}</div>
                         <div class="popup-address">${baseLodging.direccion}</div>
@@ -884,24 +884,24 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderBudgetList() {
         const listContainer = document.getElementById('budget-list');
         listContainer.innerHTML = '';
-        
+
         let savedSelections = {};
         try {
             const saved = localStorage.getItem('budgetSelections');
             if (saved) savedSelections = JSON.parse(saved);
-        } catch(e) {}
-        
+        } catch (e) { }
+
         PUNTOS_TURISTICOS.forEach(pt => {
             // Se asume que BUDGET_DATA está cargado globalmente desde budget_data.js
             const data = typeof BUDGET_DATA !== "undefined" ? BUDGET_DATA[pt.id] : null;
-            if (!data) return; 
-            
+            if (!data) return;
+
             const selection = savedSelections[pt.id] || { checked: true, option: 0 };
-            
+
             const itemDiv = document.createElement('div');
             itemDiv.className = `budget-item ${selection.checked ? '' : 'disabled'}`;
             itemDiv.dataset.id = pt.id;
-            
+
             let optionsHtml = '';
             if (data.options.length > 1) {
                 optionsHtml = `<select class="budget-select">`;
@@ -913,7 +913,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 optionsHtml = `<span style="font-size: 0.9rem; color: var(--text-muted);">${data.options[0].name}</span>`;
             }
-            
+
             itemDiv.innerHTML = `
                 <input type="checkbox" class="budget-item-checkbox" ${selection.checked ? 'checked' : ''}>
                 <div class="budget-item-details">
@@ -925,18 +925,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="budget-item-price">€ 0.00</div>
                 </div>
             `;
-            
+
             const checkbox = itemDiv.querySelector('.budget-item-checkbox');
             checkbox.addEventListener('change', calculateBudgetTotal);
-            
+
             const select = itemDiv.querySelector('.budget-select');
             if (select) {
                 select.addEventListener('change', calculateBudgetTotal);
             }
-            
+
             listContainer.appendChild(itemDiv);
         });
-        
+
         calculateBudgetTotal();
     }
 
@@ -944,25 +944,25 @@ document.addEventListener("DOMContentLoaded", () => {
         let total = 0;
         const listItems = document.querySelectorAll('.budget-item');
         const selections = {};
-        
+
         listItems.forEach(item => {
             const id = item.dataset.id;
             const checkbox = item.querySelector('.budget-item-checkbox');
             const select = item.querySelector('.budget-select');
             const data = BUDGET_DATA[id];
-            
+
             if (!data) return;
-            
+
             const optionIndex = select ? parseInt(select.value) : 0;
             const isChecked = checkbox.checked;
-            
+
             selections[id] = { checked: isChecked, option: optionIndex };
-            
+
             if (isChecked) {
                 item.classList.remove('disabled');
                 const opt = data.options[optionIndex];
                 let itemTotal = 0;
-                
+
                 if (opt.isFamilyPrice) {
                     itemTotal = opt.priceAdult; // Precio globar para toda la familia (ej. Free Tour)
                 } else {
@@ -970,10 +970,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     const price14 = opt.price14 !== undefined ? opt.price14 : priceAdult;
                     const price11 = opt.price11 !== undefined ? opt.price11 : priceAdult;
                     const price8 = opt.price8 !== undefined ? opt.price8 : priceAdult;
-                    
+
                     itemTotal = (priceAdult * 2) + price14 + price11 + price8;
                 }
-                
+
                 total += itemTotal;
                 item.querySelector('.budget-item-price').textContent = `€ ${itemTotal.toFixed(2)}`;
             } else {
@@ -981,7 +981,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.querySelector('.budget-item-price').textContent = `€ 0.00`;
             }
         });
-        
+
         document.getElementById('budget-total-value').textContent = `€ ${total.toFixed(2)}`;
         localStorage.setItem('budgetSelections', JSON.stringify(selections));
     }

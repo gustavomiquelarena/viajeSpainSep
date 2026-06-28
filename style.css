@@ -172,20 +172,32 @@ h1, h2, h3, .logo-area h1 {
     font-weight: 600;
 }
 
-.viability-top-btn {
-    background: var(--bg-badge);
-    color: var(--accent-color);
-    border: none;
-    flex: none; /* Previene que tome el 100% del espacio disponible */
+.header-action-btn {
+    background: var(--bg-badge) !important;
+    color: var(--accent-color) !important;
+    border: none !important;
+    flex: none;
+    width: auto;
+    padding: 6px 12px !important;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
 }
-.viability-top-btn.active {
-    border: none;
-    background: var(--accent-hover);
-    color: white;
+.header-action-btn.active {
+    background: var(--accent-hover) !important;
+    color: white !important;
 }
-.viability-top-btn:hover {
-    background: var(--accent-color);
-    color: white;
+.header-action-btn:hover {
+    background: var(--accent-color) !important;
+    color: white !important;
 }
 
 .badge {
