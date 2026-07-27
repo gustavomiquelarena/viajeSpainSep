@@ -159,7 +159,6 @@ body::before {
 }
 .bg-mad {
     background-image: url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800');
-    filter: grayscale(80%);
 }
 
 .card-content {
