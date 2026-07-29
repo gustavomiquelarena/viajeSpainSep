@@ -418,20 +418,19 @@ const PUNTOS_TURISTICOS = [
     "id": "t6",
     "dia": 1,
     "fecha": "18/9",
-    "nombre": "Civitatis: Free Tour Born",
+    "nombre": "Paseo por el Born",
     "lat": 41.3838,
     "lng": 2.1785,
     "tiempo": "16:00 - 18:00",
-    "descripcion": "Duración fija de 2:00 hs para recorrer las calles y la fisionomía del barrio.",
+    "descripcion": "Tarde libre para perderse por las estrechas callejuelas medievales del Born, disfrutando de su ambiente bohemio, sus tiendas de diseño y pequeños cafés.",
     "imagen": "https://images.unsplash.com/photo-1558642084-fd074ec4bd2d?w=800",
-    "isFreeTour": true,
-    "link": "https://www.civitatis.com/ar/barcelona/free-tour-born/#detalles",
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Basilica+de+Santa+Maria+del+Mar+Barcelona",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=El+Born+Barcelona",
     "viability": {
-      "horario": "Salidas a las 12:00 y 16:00 hs.",
-      "tarifas": "Free tour."
+      "horario": "Paseo libre",
+      "tarifas": "Gratuito"
     },
-    "viability_full": "Free Tour El Born de Civitatis:\n* Duración: 2 horas.\n* Horarios de Salida: A las 12:00 hs y a las 16:00 hs.\n* Enlace Oficial: https://www.civitatis.com/ar/barcelona/free-tour-born/#detalles\n\nEl recorrido a pie transita las callejuelas medievales del Born, explicando la evolución histórica de la zona."
+    "viability_full": "Paseo libre a pie por el barrio del Born. Recorrido sin restricciones de horario."
   },
   {
     "id": "t7",

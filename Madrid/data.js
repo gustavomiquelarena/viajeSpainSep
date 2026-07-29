@@ -139,21 +139,7 @@ const PUNTOS_TURISTICOS = [
     "viability": { "horario": "Exterior", "tarifas": "Gratuito" },
     "viability_full": "Puntos de interés: Monumento y fuente al aire libre. Opcional: mirador del Palacio de Cibeles (€4 general, €2 de 7-14 años, requiere reserva online)."
   },
-  {
-    "id": "m14",
-    "dia": 2,
-    "fecha": "29/9",
-    "nombre": "Almuerzo en la zona del Retiro",
-    "lat": 40.4190,
-    "lng": -3.6820,
-    "tiempo": "13:00 - 14:15",
-    "descripcion": "Disfruta de la variada gastronomía de tabernas tradicionales o bistrós modernos que se encuentran en las calles adyacentes al Parque del Retiro.",
-    "imagen": "https://images.unsplash.com/photo-1543158266-00669f4ad616?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Restaurantes+cerca+del+Retiro+Madrid",
-    "viability": { "horario": "Almuerzo", "tarifas": "Libre" },
-    "viability_full": "Recomendación: Elegir un lugar cercano a la entrada norte del parque para optimizar los tiempos."
-  },
+
   {
     "id": "m10",
     "dia": 2,
@@ -286,12 +272,12 @@ const PUNTOS_TURISTICOS = [
     "lat": 40.4292,
     "lng": -3.6841,
     "tiempo": "11:50 - 13:30",
-    "descripcion": "Paseo por las amplias avenidas del distrito más exclusivo de Madrid, caracterizado por sus tiendas elegantes, bellas fachadas y excelentes restaurantes para almorzar.",
+    "descripcion": "Paseo por las amplias avenidas del distrito más exclusivo de Madrid, destacando la famosa calle Serrano con sus tiendas elegantes, bellas fachadas y restaurantes para almorzar.",
     "imagen": "https://images.unsplash.com/photo-1549849171-09f62448c5dd?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Calle+Serrano+Madrid",
     "viability": { "horario": "Almuerzo", "tarifas": "Libre" },
-    "viability_full": "Barrio de Salamanca: Zona residencial/comercial premium. Ofrece muchas opciones gastronómicas de primer nivel."
+    "viability_full": "Barrio de Salamanca: Zona residencial/comercial premium. Ideal caminar por la calle Serrano. Ofrece muchas opciones gastronómicas de primer nivel."
   },
   {
     "id": "m15",
@@ -326,9 +312,26 @@ const PUNTOS_TURISTICOS = [
 
   // DIA 5 (2/10) - Viernes
   {
-    "id": "m21",
+    "id": "m27",
     "dia": 5,
     "fecha": "2/10",
+    "nombre": "Excursión a Toledo",
+    "lat": 39.8628,
+    "lng": -4.0273,
+    "tiempo": "09:00 - 18:00",
+    "descripcion": "Visita a la antigua ciudad medieval de Toledo, conocida como la ciudad de las tres culturas. Recorrido por su imponente Alcázar, la Catedral Primada y sus sinuosas calles históricas.",
+    "imagen": "https://images.unsplash.com/photo-1548678967-f1aca58f6236?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Toledo+Spain",
+    "viability": { "horario": "Día completo", "tarifas": "Tren AVE aprox. €22" },
+    "viability_full": "Toledo: Accesible rápidamente en tren de alta velocidad (AVE) desde la estación de Atocha. Se recomienda comprar los billetes de tren con antelación."
+  },
+
+  // DIA 6 (3/10) - Sábado
+  {
+    "id": "m21",
+    "dia": 6,
+    "fecha": "3/10",
     "nombre": "Museo Nacional Centro de Arte Reina Sofía",
     "lat": 40.4079,
     "lng": -3.6946,
@@ -338,40 +341,8 @@ const PUNTOS_TURISTICOS = [
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Museo+Reina+Sofia+Madrid",
     "viability": { "horario": "10:00 - 21:00", "tarifas": "€12 (Menores gratis)" },
-    "viability_full": "Reina Sofía: Cerrado los martes. Abierto el viernes de 10:00 a 21:00. Entrada general: €12. Menores de 18 años entran gratis (solicitar ticket en taquilla con identificación). Horario de mayor afluencia familiar: 10:00 - 12:00."
+    "viability_full": "Reina Sofía: Abierto los sábados de 10:00 a 21:00. Entrada general: €12. Menores de 18 años entran gratis (solicitar ticket en taquilla con identificación)."
   },
-  {
-    "id": "m22",
-    "dia": 5,
-    "fecha": "2/10",
-    "nombre": "Almuerzo en Legazpi / Matadero",
-    "lat": 40.3900,
-    "lng": -3.6970,
-    "tiempo": "12:30 - 14:00",
-    "descripcion": "Desplazamiento al sur de la ciudad y almuerzo en restaurantes locales de la zona de Legazpi o dentro del área gastronómica de Matadero.",
-    "imagen": "https://images.unsplash.com/photo-1543158266-00669f4ad616?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Matadero+Madrid+Restaurantes",
-    "viability": { "horario": "Almuerzo", "tarifas": "Libre" },
-    "viability_full": "Fácil acceso en metro (Línea 3 a Legazpi) o caminata desde el museo."
-  },
-  {
-    "id": "m23",
-    "dia": 5,
-    "fecha": "2/10",
-    "nombre": "Madrid Río y Matadero Madrid",
-    "lat": 40.3922,
-    "lng": -3.6974,
-    "tiempo": "14:00 - 17:30",
-    "descripcion": "Tarde de diversión al aire libre en Madrid Río, un gran parque lineal junto al río Manzanares que cuenta con 17 áreas de juegos infantiles espectaculares. El paseo incluye la visita al complejo cultural Matadero Madrid.",
-    "imagen": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Matadero+Madrid",
-    "viability": { "horario": "09:00 - 22:00", "tarifas": "Acceso libre" },
-    "viability_full": "Matadero Madrid: El recinto general abre todos los días de 09:00 a 22:00. Las salas de exposiciones abren por la tarde (martes a domingos). Acceso al complejo es libre y gratuito. Madrid Río tiene toboganes y tirolesas infantiles."
-  },
-
-  // DIA 6 (3/10) - Sábado
   {
     "id": "m25",
     "dia": 6,
@@ -379,7 +350,7 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Compras de último momento por el Centro",
     "lat": 40.4172,
     "lng": -3.7045,
-    "tiempo": "10:00 - 13:15",
+    "tiempo": "12:00 - 13:30",
     "descripcion": "Tiempo disponible para adquirir recuerdos y caminar por las peatonales comerciales como calle Arenal, Preciados o calle Mayor.",
     "imagen": "https://images.unsplash.com/photo-1549849171-09f62448c5dd?w=800",
     "isFreeTour": false,
