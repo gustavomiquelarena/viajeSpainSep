@@ -1,4 +1,21 @@
-const HOSPEDAJES = [];
+const HOSPEDAJES = [
+  {
+    "opcion": "12",
+    "hospedaje": "Sofisticado y renovado - 2BD 2BTH-Malasaña",
+    "sitio": "Airbnb",
+    "importe": "Reservado",
+    "direccion": "Calle Andrés Borrego, 13 3, Madrid, Comunidad de Madrid 28004, España",
+    "cancelacion": "Confirmado",
+    "camas": "4 camas",
+    "calificacion": "Airbnb",
+    "link": "https://www.airbnb.com.ar/rooms/38011908",
+    "lat": 40.42348,
+    "lng": -3.70658,
+    "dorm": "2",
+    "banos": "2",
+    "address_estimated": false
+  }
+];
 
 const PUNTOS_TURISTICOS = [
   // DIA 1 (28/9) - Lunes

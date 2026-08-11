@@ -580,7 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="popup-title">Alojamiento Confirmado:<br>${baseLodging.hospedaje}</div>
                         <div class="popup-address">${baseLodging.direccion}</div>
-                        <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 8px 0;">Base de operaciones para el viaje.<br><a href="${baseLodging.link}" target="_blank" style="color:#2563eb; text-decoration:underline; font-weight:600;"><i class="fa-solid fa-link"></i> Ver en Booking</a></p>
+                        <p style="font-size:12px; color:var(--text-muted); line-height:1.4; margin:4px 0 8px 0;">Base de operaciones para el viaje.<br><a href="${baseLodging.link}" target="_blank" style="color:#2563eb; text-decoration:underline; font-weight:600;"><i class="fa-solid fa-link"></i> Ver en ${baseLodging.sitio || 'Booking'}</a></p>
                     </div>
                 `;
                 marker.bindPopup(popupContent, { maxWidth: 280 });
