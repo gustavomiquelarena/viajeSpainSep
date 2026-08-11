@@ -428,14 +428,14 @@ document.addEventListener("DOMContentLoaded", () => {
                  </div>
 
                  <div class="viability-card info-card">
-                     <div class="card-title-sec">
-                         <span class="monument-name">Museo de las Ilusiones</span>
-                         <span class="info-badge">Comprar Online</span>
-                     </div>
-                     <div class="card-body-sec">
-                         <p><strong>Aviso:</strong> Es más barato comprar online. Permite reprogramar la visita hasta 2 horas antes de la cita si se complica el itinerario.</p>
-                     </div>
-                 </div>
+                      <div class="card-title-sec">
+                          <span class="monument-name">Museum of Senses</span>
+                          <span class="info-badge">Comprar Online</span>
+                      </div>
+                      <div class="card-body-sec">
+                          <p><strong>Aviso:</strong> Se aconseja comprar online. Entrada familiar (2+2) + 1 adulto adicional = €79 aprox. Incluye kit con medias (la experiencia es sin zapatos) y dulces.</p>
+                      </div>
+                  </div>
 
                  <div class="viability-card info-card">
                      <div class="card-title-sec">
