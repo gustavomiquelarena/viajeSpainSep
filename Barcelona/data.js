@@ -995,19 +995,19 @@ const PUNTOS_TURISTICOS = [
     "id": "t33",
     "dia": 5,
     "fecha": "22/9",
-    "nombre": "Recinto Modernista de Sant Pau",
-    "lat": 41.4124,
-    "lng": 2.1743,
+    "nombre": "Biblioteca Gabriel García Márquez",
+    "lat": 41.4172731,
+    "lng": 2.1999626,
     "tiempo": "12:00 - 13:30",
-    "descripcion": "Visita de entre 60 y 90 minutos.",
-    "imagen": "https://images.unsplash.com/photo-1612456425712-4c281df6fa30?w=800",
+    "descripcion": "Visita a la espectacular biblioteca pública galardonada como la mejor del mundo en 2023. Destaca por su icónico diseño arquitectónico de madera y su especialización en literatura latinoamericana.",
+    "imagen": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800",
     "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Recinto+Modernista+de+Sant+Pau+Barcelona",
+    "maps_link": "https://www.google.com/maps/place/Biblioteca+Gabriel+Garc%C3%ADa+M%C3%A1rquez/@41.4172731,2.1999626,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a397db7a8a6b:0x82a6835eee60e570!8m2!3d41.4172731!4d2.1999626!16s%2Fg%2F11h79qxdww!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D",
     "viability": {
-      "horario": "10:00 - 18:30 hs.",
-      "tarifas": "€16.00 general."
+      "horario": "Mar-Jue-Vie: 9:30-20:30 | Lun-Mié: 9:30-13:30, 15:30-20:30 | Sáb: 10:00-14:00, 16:00-20:00 | Dom: 10:00-14:00.",
+      "tarifas": "Acceso gratuito."
     },
-    "viability_full": "Recinto Modernista de Sant Pau:\n* Recomendación Estratégica: Programar en la mañana de una jornada laborable (martes a jueves) para mitigar el impacto de las aglomeraciones de grupos turísticos.\n* Horario de Apertura en Septiembre: De 10:00 a 18:30 (último acceso a las 18:00 hs).\n* Tarifas: Entrada general de €16.00 online. Los menores de 12 años gozan de acceso gratuito."
+    "viability_full": "Biblioteca Gabriel García Márquez:\n* Reconocimiento: Galardonada como la mejor biblioteca pública del mundo en 2023 por la IFLA.\n* Arquitectura: Impresionante diseño geométrico sostenible con estructura de madera visible, que se asemeja a hojas de libros abiertas.\n* Horario de Apertura el Martes: De 9:30 a 20:30 hs. Ideal para la visita al mediodía (12:00 - 13:30 hs).\n* Tarifas: Acceso 100% libre y gratuito."
   },
   {
     "id": "t33b",

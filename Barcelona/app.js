@@ -478,6 +478,29 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="viability-category">
+                <div class="category-title"><i class="fa-solid fa-map-pin"></i> Propuesta Alternativa (Reprogramación)</div>
+                <div class="viability-card info-card" style="display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; margin-bottom: 10px;">
+                    <div style="position: relative; height: 130px; width: 100%;">
+                        <img src="https://images.unsplash.com/photo-1612456425712-4c281df6fa30?w=800" alt="Recinto Modernista de Sant Pau" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="warning-badge" style="position: absolute; top: 10px; right: 10px; background-color: var(--color-tourist); color: white; border-radius: 4px; padding: 3px 6px; font-size: 10px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">Posible Alternativa</span>
+                    </div>
+                    <div class="card-body-sec" style="padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <h3 style="margin: 0; font-size: 14px; color: var(--text-main); font-weight: 600;">Recinto Modernista de Sant Pau</h3>
+                        <p style="margin: 0; font-size: 11px; color: var(--text-muted); line-height: 1.4;">El mayor conjunto arquitectónico modernista del mundo, diseñado por Lluís Domènech i Montaner. Un complejo histórico de pabellones rodeados de jardines que funcionó como hospital público y destaca por su espectacular colorido y detalle artístico.</p>
+                        <div style="background: var(--bg-card); padding: 8px; border-radius: 6px; display: flex; flex-direction: column; gap: 4px; font-size: 11px; border: 1px solid var(--border-color); margin: 2px 0;">
+                            <div><strong><i class="fa-regular fa-clock"></i> Horario:</strong> De 10:00 a 18:30 hs (último acceso 18:00 hs).</div>
+                            <div><strong><i class="fa-solid fa-euro-sign"></i> Tarifas:</strong> Entrada general de €16.00 online. Menores de 12 años entran gratis.</div>
+                        </div>
+                        <p style="margin: 0; font-size: 11px; color: var(--text-muted); line-height: 1.4;"><i class="fa-solid fa-circle-info" style="color: var(--accent-color);"></i> <strong>Recomendación:</strong> Programar en la mañana de una jornada laborable (martes a jueves) para mitigar el impacto de las aglomeraciones de grupos turísticos. Ideal como visita opcional ante cualquier reprogramación.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Recinto+Modernista+de+Sant+Pau+Barcelona" target="_blank" class="free-tour-link-item" style="margin-top: 4px; padding: 6px 10px; text-decoration: none; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); font-size: 11px;">
+                            <span><i class="fa-solid fa-map-location-dot"></i> Ver ubicación en Google Maps</span>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viability-category">
                 <div class="category-title"><i class="fa-solid fa-circle-info"></i> Teleféricos de Montjuïc: ¡No Confundirlos!</div>
                 <div class="viability-card info-card">
                     <div style="display:flex; flex-direction:column; gap:10px;">

@@ -18,7 +18,7 @@ const BUDGET_DATA = {
     "t29": { options: [{ name: "Entrada Básica", priceAdult: 29 }] },
     "t30": { options: [{ name: "Entrada General", priceAdult: 21 }] },
     "t32": { options: [{ name: "Entrada Básica", priceAdult: 26 }, { name: "Entrada con Torres", priceAdult: 40 }] },
-    "t33": { options: [{ name: "Entrada General (Menores de 12 Gratis)", priceAdult: 16, price14: 16, price11: 0, price8: 0 }] },
+    "t33": { options: [{ name: "Acceso Gratuito", priceAdult: 0, price14: 0, price11: 0, price8: 0 }] },
     "t34": { options: [{ name: "Immersive Tour Básico", priceAdult: 28 }, { name: "Immersive Tour Flexible", priceAdult: 38 }, { name: "Immersive Guided Tour", priceAdult: 51 }] },
     "t36": { options: [{ name: "Mirador Básico", priceAdult: 18 }] }
 };
