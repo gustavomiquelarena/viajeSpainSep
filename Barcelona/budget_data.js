@@ -11,6 +11,7 @@ const BUDGET_DATA = {
     "t15": { options: [{ name: "Visita Autoguiada", priceAdult: 16 }] },
     "t18": { options: [{ name: "Ascensor Exterior", priceAdult: 1 }] },
     "t19": { options: [{ name: "Bus 150", priceAdult: 2.50 }, { name: "Teleférico de Montjuïc (Ida y Vuelta)", priceAdult: 16 }] },
+    "t_poble": { options: [{ name: "Entrada General Grupo", isFamilyPrice: true, priceAdult: 56.40 }] },
     "t25": { options: [{ name: "Aporte Sugerido (Familia)", isFamilyPrice: true, priceAdult: 50 }] },
     "t27": { options: [{ name: "Aeri del Port (Ida)", priceAdult: 12.50 }, { name: "Aeri del Port (Ida y Vuelta)", priceAdult: 20 }] },
     "t28": { options: [{ name: "Boleto Sencillo (Metro/Bus)", priceAdult: 2.50 }] },

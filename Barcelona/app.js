@@ -401,6 +401,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="viability-card info-card">
                     <div class="card-title-sec">
+                        <span class="monument-name">Poble Espanyol</span>
+                        <span class="info-badge">Comprar Online</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Tarifas:</strong> €56.40 anticipada.</p>
+                        <p><strong>Consejo:</strong> Adquirir con anticipación para asegurar disponibilidad.</p>
+                    </div>
+                </div>
+
+                <div class="viability-card info-card">
+                    <div class="card-title-sec">
                         <span class="monument-name">Park Güell (Zona Monumental)</span>
                         <span class="warning-badge">2-3 semanas antes</span>
                     </div>
@@ -452,7 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="alert-title-text"><i class="fa-solid fa-circle-xmark"></i> Laberinto de Horta en Restauración</span>
                     </div>
                     <div class="card-body-sec">
-                        <p>Bajo plan de restauración botánica severa <strong>hasta el primer trimestre de 2026</strong>. El laberinto de cipreses está cerrado. Jardines perimetrales parcialmente transitables. Entrada general €2.50 (gratis dom/mié).</p>
+                        <p>Bajo plan de restauración botánica severa <strong>hasta el primer trimestre de 2026</strong>. El recinto está cerrado para este viaje y no se puede visitar.</p>
                     </div>
                 </div>
 

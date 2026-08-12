@@ -579,13 +579,13 @@ const PUNTOS_TURISTICOS = [
   },
   {
     "id": "t15",
-    "dia": 3,
-    "fecha": "20/9",
+    "dia": 5,
+    "fecha": "22/9",
     "nombre": "Palau de la Música Catalana",
     "lat": 41.3875,
     "lng": 2.1753,
-    "tiempo": "09:00 - 10:30",
-    "descripcion": "Visita turística diurna autoguiada en su horario de mañana (9:00 a 15:30).",
+    "tiempo": "09:30 - 11:00",
+    "descripcion": "Visita turística diurna autoguiada en su horario de mañana.",
     "imagen": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Palau+de+la+Musica+Catalana+Barcelona",
@@ -596,40 +596,22 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Palau de la Música Catalana:\n* Acceso: Visitas turísticas diurnas de lunes a domingo de 09:00 a 15:30.\n* Tarifas: €16.00 con audioguía interactiva si se adquiere online anticipadamente (asciende a €20.00-€22.00 por otros canales de reventa).\n* Cafè Palau: Ubicado en el vestíbulo del edificio con columnas de mosaicos; acceso libre operativo de 09:00 a 24:00."
   },
   {
-    "id": "t16",
-    "dia": 3,
-    "fecha": "20/9",
-    "nombre": "Laberinto de Horta",
-    "lat": 41.4398,
-    "lng": 2.1462,
-    "tiempo": "11:00 - 13:00",
-    "descripcion": "Entrada gratuita por ser domingo. Paseo por los jardines románticos perimetrales (considerando las restricciones de restauración botánica actuales).",
-    "imagen": "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Laberinto+de+Horta+Barcelona",
-    "viability": {
-      "horario": "Sept 1-15: 10:00-19:00 | Sept 16-30: 10:00-18:00.",
-      "tarifas": "€2.50 laborables | Gratis domingos y miércoles."
-    },
-    "viability_full": "Laberinto de Horta:\n* Aviso de Planificación Crítico: Se encuentra sometido a un riguroso plan de restauración botánica y paisajística con obras proyectadas hasta el primer trimestre de 2026. Esto limita significativamente el acceso al laberinto de cipreses propiamente dicho, aunque las zonas ajardinadas románticas perimetrales permanecen parcialmente accesibles.\n* Horario en Septiembre: De 10:00 a 19:00 (hasta el día 15) y de 10:00 a 18:00 (desde el día 16).\n* Tarifas: €2.50 en días laborables. Gratuito los miércoles y domingos. Se ubicó en domingo para aprovechar la entrada gratis."
-  },
-  {
     "id": "t17",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Almuerzo en Plaza de España",
+    "nombre": "Plaza de España",
     "lat": 41.3750,
     "lng": 2.1491,
-    "tiempo": "13:30 - 14:30",
-    "descripcion": "Zona de Plaza de España.",
+    "tiempo": "11:30 - 12:00",
+    "descripcion": "Visita a la zona monumental de la plaza.",
     "imagen": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Plaza+de+Espana+Barcelona",
     "viability": {
-      "horario": "Almuerzos al mediodía.",
-      "tarifas": "Consumo de restauración libre."
+      "horario": "Acceso libre.",
+      "tarifas": "Gratuito."
     },
-    "viability_full": "Restauración libre en el área de Plaza de España, punto de inicio para ascender a Montjuïc, rodeada de las Torres Venecianas y el Centro Arenas."
+    "viability_full": "Plaza de España, punto de inicio para ascender a Montjuïc, rodeada de las Torres Venecianas."
   },
   {
     "id": "t18",
@@ -638,8 +620,8 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Mirador del Centro Comercial Arenas",
     "lat": 41.3761,
     "lng": 2.1495,
-    "tiempo": "14:30 - 15:30",
-    "descripcion": "Ascenso gratuito por escaleras mecánicas interiores para una vista panorámica de 360 grados del eje monumental.",
+    "tiempo": "12:00 - 12:30",
+    "descripcion": "Ascenso gratuito por escaleras mecánicas interiores para una vista panorámica de 360 grados.",
     "imagen": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Centro+Comercial+Arenas+Barcelona",
@@ -648,6 +630,24 @@ const PUNTOS_TURISTICOS = [
       "tarifas": "Gratis por escaleras internas | €1.00 por ascensor externo."
     },
     "viability_full": "Plaza de España y Centro Comercial Arenas:\n* Mirador de Arenas: Terraza superior circular de 360 grados de la antigua plaza de toros.\n* Ascenso gratuito: A través de las escaleras mecánicas interiores del centro comercial.\n* Ascensor exterior: El ascensor acristalado exterior tiene una tarifa de €1.00 por viaje."
+  },
+  {
+    "id": "t_poble",
+    "dia": 3,
+    "fecha": "20/9",
+    "nombre": "Poble Espanyol y Almuerzo",
+    "lat": 41.3687,
+    "lng": 2.1472,
+    "tiempo": "12:30 - 15:30",
+    "descripcion": "Visita de 2h30m al recinto y 30 minutos extras para almorzar dentro.",
+    "imagen": "https://images.unsplash.com/photo-1587330933367-183cb53a5f54?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Poble+Espanyol+Barcelona",
+    "viability": {
+      "horario": "10:00 - 20:00 hs.",
+      "tarifas": "€56.40 (ticket grupo anticipado)."
+    },
+    "viability_full": "Poble Espanyol:\n* Museo arquitectónico al aire libre ubicado en Montjuïc.\n* Entrada anticipada obligatoria para asegurar disponibilidad.\n* Dentro del recinto hay múltiples opciones de restauración para almorzar."
   },
   {
     "id": "t19",
@@ -975,12 +975,12 @@ const PUNTOS_TURISTICOS = [
   },
   {
     "id": "t32",
-    "dia": 5,
-    "fecha": "22/9",
+    "dia": 3,
+    "fecha": "20/9",
     "nombre": "Barça Immersive Tour",
     "lat": 41.3809,
     "lng": 2.1228,
-    "tiempo": "09:30 - 12:00",
+    "tiempo": "09:00 - 11:30",
     "descripcion": "Visita al museo del Barça a primera hora.",
     "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
     "isFreeTour": false,
