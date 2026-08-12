@@ -596,6 +596,24 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Palau de la Música Catalana:\n* Acceso: Visitas turísticas diurnas de lunes a domingo de 09:00 a 15:30.\n* Tarifas: €16.00 con audioguía interactiva si se adquiere online anticipadamente (asciende a €20.00-€22.00 por otros canales de reventa).\n* Cafè Palau: Ubicado en el vestíbulo del edificio con columnas de mosaicos; acceso libre operativo de 09:00 a 24:00."
   },
   {
+    "id": "t32",
+    "dia": 3,
+    "fecha": "20/9",
+    "nombre": "Barça Immersive Tour",
+    "lat": 41.3809,
+    "lng": 2.1228,
+    "tiempo": "09:00 - 11:30",
+    "descripcion": "Visita al museo del Barça a primera hora.",
+    "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Barca+Immersive+Tour+Museu+del+FC+Barcelona",
+    "viability": {
+      "horario": "Lun-Sáb: 9:30-19:00 | Dom: 10:00-14:30 hs.",
+      "tarifas": "€28.00 básico online."
+    },
+    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana.\n* Inclusiones de la Visita: Museo del Club (trofeos de Champions, balones de oro, camisetas), Spotify Camp Nou Live (sala inmersiva 360 grados y sonido envolvente), Mirador de la Reconstrucción (plataforma elevada exterior para observar las obras en el estadio) y desafíos interactivos (RoboKeeper, realidad virtual Barça Virtual Dream).\n* Tarifas Online Oficiales: Immersive Tour Basic €28.00 (revendedores cobran €34.00-€36.00), Flexible €38.00 (validez extendida), Total Experience €49.00 (incluye RoboKeeper, realidad virtual y foto digital), Barçabus Experience €59.00, Immersive Guided Tour €51.00 a €60.00 (recorrido guiado de 1.5 horas).\n* Horarios en Septiembre: Lunes a sábado de 09:30 a 19:00 (último acceso 45 min antes); domingos abre en horario reducido de 10:00 a 14:30.\n* Alerta de Eventos: Los días de partido o de obras complejas en el perímetro, los accesos y horarios pueden variar de forma imprevista. Reconfirmar en la web oficial.\n* Cómo llegar: Metro L3 (estaciones Palau Reial o Les Corts, 10 min a pie) o L5 (estaciones Collblanc o Badal)."
+  },
+  {
     "id": "t17",
     "dia": 3,
     "fecha": "20/9",
@@ -972,24 +990,6 @@ const PUNTOS_TURISTICOS = [
       "tarifas": "Gratuito."
     },
     "viability_full": "Paseo de Gracia: Eje modernista central de acceso libre y transitable las 24 horas, ideal para ver el diseño de los pavimentos (panots de Gaudí) y las farolas modernistas diseñadas por Pere Falqués."
-  },
-  {
-    "id": "t32",
-    "dia": 3,
-    "fecha": "20/9",
-    "nombre": "Barça Immersive Tour",
-    "lat": 41.3809,
-    "lng": 2.1228,
-    "tiempo": "09:00 - 11:30",
-    "descripcion": "Visita al museo del Barça a primera hora.",
-    "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Barca+Immersive+Tour+Museu+del+FC+Barcelona",
-    "viability": {
-      "horario": "Lun-Sáb: 9:30-19:00 | Dom: 10:00-14:30 hs.",
-      "tarifas": "€28.00 básico online."
-    },
-    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana.\n* Inclusiones de la Visita: Museo del Club (trofeos de Champions, balones de oro, camisetas), Spotify Camp Nou Live (sala inmersiva 360 grados y sonido envolvente), Mirador de la Reconstrucción (plataforma elevada exterior para observar las obras en el estadio) y desafíos interactivos (RoboKeeper, realidad virtual Barça Virtual Dream).\n* Tarifas Online Oficiales: Immersive Tour Basic €28.00 (revendedores cobran €34.00-€36.00), Flexible €38.00 (validez extendida), Total Experience €49.00 (incluye RoboKeeper, realidad virtual y foto digital), Barçabus Experience €59.00, Immersive Guided Tour €51.00 a €60.00 (recorrido guiado de 1.5 horas).\n* Horarios en Septiembre: Lunes a sábado de 09:30 a 19:00 (último acceso 45 min antes); domingos abre en horario reducido de 10:00 a 14:30.\n* Alerta de Eventos: Los días de partido o de obras complejas en el perímetro, los accesos y horarios pueden variar de forma imprevista. Reconfirmar en la web oficial.\n* Cómo llegar: Metro L3 (estaciones Palau Reial o Les Corts, 10 min a pie) o L5 (estaciones Collblanc o Badal)."
   },
   {
     "id": "t33",
