@@ -719,13 +719,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateMapMarkers();
                 if (activeTab === "lodgings") {
                     renderLodgings();
-                    map.setView([39.469, -0.376], 13);
+                    map.setView([40.4168, -3.7038], 13);
                 } else if (activeTab === "itinerary") {
                     renderItinerary();
                     fitMapToItinerary();
                 } else if (activeTab === "viability") {
                     renderViabilityList();
-                    map.setView([39.469, -0.376], 12);
+                    map.setView([40.4168, -3.7038], 12);
                 }
             });
         });
@@ -797,10 +797,10 @@ document.addEventListener("DOMContentLoaded", () => {
             updateMapMarkers();
 
             if (showBothOnMap) {
-                map.setView([39.469, -0.376], 13, { animate: true });
+                map.setView([40.4168, -3.7038], 13, { animate: true });
             } else {
                 if (activeTab === "lodgings") {
-                    map.setView([39.469, -0.376], 13, { animate: true });
+                    map.setView([40.4168, -3.7038], 13, { animate: true });
                 } else {
                     fitMapToItinerary();
                 }
