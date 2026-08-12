@@ -79,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Helper functions to parse Excel data
     function parsePrice(priceStr) {
         if (!priceStr) return 0;
-        return parseFloat(priceStr.replace(/[^0-9]/g, ''));
+        let val = parseFloat(priceStr.replace(/[^0-9]/g, ''));
+        return isNaN(val) ? 0 : val;
     }
 
     function parseRating(ratingStr) {

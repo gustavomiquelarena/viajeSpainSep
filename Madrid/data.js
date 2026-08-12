@@ -311,22 +311,52 @@ const PUNTOS_TURISTICOS = [
     "viability": { "horario": "10:00 - 20:00", "tarifas": "Pack Familiar + 1 Adic. desde €79" },
     "viability_full": "Museum of Senses: Ubicado en Calle de la Virgen de los Peligros, 5. Recorrido autoguiado de 1 a 1.5 horas. Se aconseja comprar online. Entrada familiar (2 adultos + 2 niños) desde €60 online + 1 Adulto adicional para el hijo de 14 años (desde €19) = total aproximado €79. Incluye medias (la experiencia es sin zapatos) y un kit de degustación dulce."
   },
+  {
+    "id": "m_rey_leon",
+    "dia": 4,
+    "fecha": "1/10",
+    "nombre": "Musical El Rey León",
+    "lat": 40.4206,
+    "lng": -3.7090,
+    "tiempo": "20:00 - 23:00",
+    "descripcion": "Obra de teatro musical espectacular en la Gran Vía.",
+    "imagen": "https://images.unsplash.com/photo-1549849171-09f62448c5dd?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Teatro+Lope+de+Vega+Madrid",
+    "viability": { "horario": "20:00 hs", "tarifas": "€50 estimado" },
+    "viability_full": "El Rey León (Teatro Lope de Vega): Entrada estimada €50 por persona para Ale y los niños (4 personas)."
+  },
 
   // DIA 5 (2/10) - Viernes
   {
     "id": "m27",
     "dia": 5,
     "fecha": "2/10",
-    "nombre": "Excursión a Toledo",
+    "nombre": "Tren a Toledo (Ida y Vuelta)",
     "lat": 39.8628,
     "lng": -4.0273,
-    "tiempo": "09:00 - 18:00",
-    "descripcion": "Visita a la antigua ciudad medieval de Toledo, conocida como la ciudad de las tres culturas. Recorrido por su imponente Alcázar, la Catedral Primada y sus sinuosas calles históricas.",
+    "tiempo": "09:00 - 10:00",
+    "descripcion": "Traslado en tren de alta velocidad (AVE/Avant) desde Atocha hacia la ciudad medieval de Toledo (viaje de 30 min).",
     "imagen": "https://images.unsplash.com/photo-1548678967-f1aca58f6236?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Toledo+Spain",
-    "viability": { "horario": "Día completo", "tarifas": "Tren AVE aprox. €22" },
-    "viability_full": "Toledo: Accesible rápidamente en tren de alta velocidad (AVE) desde la estación de Atocha. Se recomienda comprar los billetes de tren con antelación."
+    "viability": { "horario": "Día completo", "tarifas": "Tren desde €13 a €22" },
+    "viability_full": "Toledo: Accesible rápidamente en tren. Se recomienda comprar los billetes de tren ida y vuelta sin equipaje con antelación. Niños menores de 14 años suelen tener descuento del 40% en Renfe."
+  },
+  {
+    "id": "m_toledo_tour",
+    "dia": 5,
+    "fecha": "2/10",
+    "nombre": "Tour Civitatis Toledo",
+    "lat": 39.8593,
+    "lng": -4.0253,
+    "tiempo": "11:00 - 13:30",
+    "descripcion": "Recorrido de 2h30m guiado por la ciudad de Toledo.",
+    "imagen": "https://images.unsplash.com/photo-1548678967-f1aca58f6236?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Plaza+de+Zocodover+Toledo",
+    "viability": { "horario": "11:00 hs", "tarifas": "€48 total" },
+    "viability_full": "Tour Civitatis en Toledo, costo total de €48 para toda la familia."
   },
 
   // DIA 6 (3/10) - Sábado
