@@ -391,10 +391,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="viability-card info-card">
                     <div class="card-title-sec">
                         <span class="monument-name">Basílica de la Sagrada Familia</span>
-                        <span class="warning-badge">3-4 semanas antes</span>
+                        <span class="warning-badge" style="background-color: rgba(16, 185, 129, 0.15); color: #10b981;">Ya Reservado</span>
                     </div>
                     <div class="card-body-sec">
-                        <p><strong>Tarifas:</strong> €26.00 a €40.00 online. No hay venta física en taquillas.</p>
+                        <p><strong>Aviso:</strong> Tickets ya comprados por un total de <strong>€118</strong> (entrada 15:45 hs, torres 17:15 hs).</p>
                         <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Torres:</strong> Descenso por escalera de caracol muy estrecha. No recomendado con movilidad reducida, vértigo o claustrofobia.</p>
                     </div>
                 </div>
@@ -424,10 +424,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="viability-card info-card">
                     <div class="card-title-sec">
                         <span class="monument-name">Casa Batlló</span>
-                        <span class="info-badge">Comprar Online</span>
+                        <span class="warning-badge" style="background-color: rgba(16, 185, 129, 0.15); color: #10b981;">Ya Reservado</span>
                     </div>
                     <div class="card-body-sec">
-                        <p><strong>Tarifas:</strong> Desde €29.00 online. Taquilla física tiene recargo de €4.00 a €15.00.</p>
+                        <p><strong>Aviso:</strong> Tickets ya comprados para las 18:00 hs (visita de 1h 30m) por un total de <strong>€117</strong>.</p>
                         <p><strong>Consejo:</strong> Audioguía de realidad aumentada interactiva excelente para niños. Gaudí Cube inmersivo incluido.</p>
                     </div>
                 </div>
@@ -446,10 +446,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="viability-card info-card">
                     <div class="card-title-sec">
                         <span class="monument-name">Barça Immersive Tour</span>
-                        <span class="info-badge">Comprar Online</span>
+                        <span class="warning-badge" style="background-color: rgba(16, 185, 129, 0.15); color: #10b981;">Ya Reservado</span>
                     </div>
                     <div class="card-body-sec">
-                        <p><strong>Tarifas:</strong> €28.00 básico online. En taquilla física o reventas sube a €34.00-€36.00.</p>
+                        <p><strong>Aviso:</strong> Tickets ya comprados para las 09:30 hs por un total de <strong>€154.50</strong>.</p>
                         <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Obras Camp Nou:</strong> El estadio está en reconstrucción y cerrado. No se visitan gradas ni vestuarios, solo la sala interactiva, museo y mirador de obras.</p>
                     </div>
                 </div>
@@ -945,7 +945,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = typeof BUDGET_DATA !== "undefined" ? BUDGET_DATA[pt.id] : null;
             if (!data) return;
 
-            const selection = savedSelections[pt.id] || { checked: true, option: 0 };
+            const defaultChecked = data.defaultUnchecked ? false : true;
+            const selection = savedSelections[pt.id] || { checked: defaultChecked, option: 0 };
 
             const itemDiv = document.createElement('div');
             itemDiv.className = `budget-item ${selection.checked ? '' : 'disabled'}`;

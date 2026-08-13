@@ -304,12 +304,27 @@ const PUNTOS_TURISTICOS = [
     "lat": 40.4184,
     "lng": -3.7013,
     "tiempo": "18:15 - 19:30",
-    "descripcion": "Una experiencia interactiva que desafía tus percepciones y despierta la curiosidad. Con más de 30 exhibiciones interactivas como el túnel de vórtice, cama de clavos y laberinto de espejos.",
+    "descripcion": "Una experiencia interactiva que desafía tus percepciones y despierta la curiosidad. Con más de 30 exhibiciones interactivas como el túnel de vórtice, cama de clavos y laberinto de espejos. En este bloque, 1 adulto y 2 niños (11 y 8 años) visitan este museo.",
     "imagen": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Museum+of+Senses+Madrid",
-    "viability": { "horario": "10:00 - 20:00", "tarifas": "Pack Familiar + 1 Adic. desde €79" },
-    "viability_full": "Museum of Senses: Ubicado en Calle de la Virgen de los Peligros, 5. Recorrido autoguiado de 1 a 1.5 horas. Se aconseja comprar online. Entrada familiar (2 adultos + 2 niños) desde €60 online + 1 Adulto adicional para el hijo de 14 años (desde €19) = total aproximado €79. Incluye medias (la experiencia es sin zapatos) y un kit de degustación dulce."
+    "viability": { "horario": "10:00 - 20:00", "tarifas": "1 Adulto + 2 Niños: desde €49" },
+    "viability_full": "Museum of Senses: Ubicado en Calle de la Virgen de los Peligros, 5. Recorrido autoguiado de 1 a 1.5 horas. Se aconseja comprar online. Entrada para 1 adulto y 2 niños (11 y 8 años) = desde €49 online. Incluye medias (la experiencia es sin zapatos) y un kit de degustación dulce."
+  },
+  {
+    "id": "m_legends",
+    "dia": 4,
+    "fecha": "1/10",
+    "nombre": "Legends: The Home of Football (Museo del Fútbol)",
+    "lat": 40.4166,
+    "lng": -3.7030,
+    "tiempo": "18:15 - 19:45",
+    "descripcion": "Un espacio interactivo y de exhibición dedicado a la historia del fútbol mundial. Cuenta con reliquias históricas, camisetas originales usadas por leyendas y experiencias de realidad virtual. En este bloque, 2 adultos (1 adulto + hijo de 14 años) visitan este museo.",
+    "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Legends+The+Home+of+Football+Madrid",
+    "viability": { "horario": "10:00 - 20:30 (Último acceso 18:30)", "tarifas": "2 Adultos: desde €45.80" },
+    "viability_full": "Legends: The Home of Football: Ubicado en Carrera de San Jerónimo, 2 (Puerta del Sol). Visita para 2 adultos (1 adulto + hijo de 14 años, quien abona entrada de adulto de 14+ años) a €22.90 cada uno = total €45.80. La última admisión es a las 18:30 y cierra a las 20:30."
   },
   {
     "id": "m_rey_leon",

@@ -602,16 +602,16 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Barça Immersive Tour",
     "lat": 41.3809,
     "lng": 2.1228,
-    "tiempo": "09:00 - 11:30",
-    "descripcion": "Visita al museo del Barça a primera hora.",
+    "tiempo": "09:30 - 11:30",
+    "descripcion": "Visita al museo del Barça. Tickets ya adquiridos para la franja de las 09:30 hs.",
     "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Barca+Immersive+Tour+Museu+del+FC+Barcelona",
     "viability": {
-      "horario": "Lun-Sáb: 9:30-19:00 | Dom: 10:00-14:30 hs.",
-      "tarifas": "€28.00 básico online."
+      "horario": "Ya Reservado (09:30 hs)",
+      "tarifas": "Total pagado €154.50"
     },
-    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana.\n* Inclusiones de la Visita: Museo del Club (trofeos de Champions, balones de oro, camisetas), Spotify Camp Nou Live (sala inmersiva 360 grados y sonido envolvente), Mirador de la Reconstrucción (plataforma elevada exterior para observar las obras en el estadio) y desafíos interactivos (RoboKeeper, realidad virtual Barça Virtual Dream).\n* Tarifas Online Oficiales: Immersive Tour Basic €28.00 (revendedores cobran €34.00-€36.00), Flexible €38.00 (validez extendida), Total Experience €49.00 (incluye RoboKeeper, realidad virtual y foto digital), Barçabus Experience €59.00, Immersive Guided Tour €51.00 a €60.00 (recorrido guiado de 1.5 horas).\n* Horarios en Septiembre: Lunes a sábado de 09:30 a 19:00 (último acceso 45 min antes); domingos abre en horario reducido de 10:00 a 14:30.\n* Alerta de Eventos: Los días de partido o de obras complejas en el perímetro, los accesos y horarios pueden variar de forma imprevista. Reconfirmar en la web oficial.\n* Cómo llegar: Metro L3 (estaciones Palau Reial o Les Corts, 10 min a pie) o L5 (estaciones Collblanc o Badal)."
+    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Estado: Tickets ya reservados y pagados (Total: €154.50) para el ingreso a las 09:30 hs. Duración estimada de la visita: 2 horas.\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana.\n* Inclusiones de la Visita: Museo del Club (trofeos de Champions, balones de oro, camisetas), Spotify Camp Nou Live (sala inmersiva 360 grados y sonido envolvente), Mirador de la Reconstrucción (plataforma elevada exterior para observar las obras en el estadio) y desafíos interactivos (RoboKeeper, realidad virtual Barça Virtual Dream)."
   },
   {
     "id": "t17",
@@ -944,16 +944,16 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Casa Batlló",
     "lat": 41.3917,
     "lng": 2.1649,
-    "tiempo": "16:30 - 17:45",
-    "descripcion": "Recorrido interior con audioguía inteligente (cierre general diurno a las 18:30; requiere preventa digital).",
+    "tiempo": "18:00 - 19:30",
+    "descripcion": "Recorrido interior con audioguía inteligente. Tickets ya adquiridos para la franja de las 18:00 hs.",
     "imagen": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Casa+Batllo+Barcelona",
     "viability": {
-      "horario": "9:00 - 18:30 hs.",
-      "tarifas": "€29.00 básico online."
+      "horario": "Ya Reservado (18:00 hs)",
+      "tarifas": "Total pagado €117"
     },
-    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia. Destaca por su fachada de trencadís y vidrios de colores que emulan el mar.\n* Tarifas y Reserva: Las entradas en taquilla física sufren recargos de entre €4.00 y €15.00 frente a la preventa digital online. Compra web imperativa. Entrada básica online: €29.00.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea.\n* Evento Especial (Magical Nights): Durante septiembre se ofrecen veladas nocturnas con copa de cava y concierto en la azotea al atardecer, requiriendo reserva con semanas de antelación debido al aforo limitado."
+    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia.\n* Estado: Tickets ya reservados y pagados (Total: €117) para el ingreso a las 18:00 hs. Duración estimada de la visita: 1 hora y 30 minutos.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea."
   },
   {
     "id": "t30",
@@ -962,7 +962,7 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Casa Amatller",
     "lat": 41.3915,
     "lng": 2.1651,
-    "tiempo": "17:45 - 19:00",
+    "tiempo": "16:30 - 17:45",
     "descripcion": "Visita autoguiada interactiva con taza de chocolate caliente tradicional al final (cierre a las 19:00).",
     "imagen": "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800",
     "isFreeTour": false,
@@ -980,7 +980,7 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Tarde/Noche Libre",
     "lat": 41.3917,
     "lng": 2.1649,
-    "tiempo": "19:00 en adelante",
+    "tiempo": "19:30 en adelante",
     "descripcion": "Paseo por los pavimentos de Gaudí y farolas de Pere Falqués en Paseo de Gracia.",
     "imagen": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800",
     "isFreeTour": false,
@@ -1040,10 +1040,10 @@ const PUNTOS_TURISTICOS = [
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
     "viability": {
-      "horario": "Lun-Vie: 9:00-20:00 | Dom: 10:30-20:00.",
-      "tarifas": "€26.00 a €40.00 online."
+      "horario": "Ya Reservado (15:45 hs)",
+      "tarifas": "Total pagado €118"
     },
-    "viability_full": "Basílica de la Sagrada Familia:\n* Horario de Apertura en Septiembre: Lunes a viernes de 09:00 a 20:00; sábados de 09:00 a 18:00; domingos de 10:30 a 20:00. Opera bajo horario estival extendido.\n* Venta de Entradas: Exclusivamente online en la plataforma web oficial. Las taquillas físicas del monumento ya no realizan venta presencial de billetes.\n* Tarifas: €26.00 a €40.00 (según el tipo de ticket, audioguía o acceso a torres).\n* Acceso a Torres: Fachada de la Natividad (vistas al sector este) o Fachada de la Pasión (vistas al centro).\n* Restricción de Salud Importante: El ascenso no está recomendado para personas con movilidad reducida, problemas cardiovasculares, vértigo o claustrofobia, debido a que el descenso es peatonal por escaleras estrechas de caracol."
+    "viability_full": "Basílica de la Sagrada Familia:\n* Estado: Tickets ya reservados y pagados (Total: €118) con entrada a las 15:45 hs y subida a la Torre de la Pasión a las 17:15 hs.\n* Horario de Apertura en Septiembre: Lunes a viernes de 09:00 a 20:00; sábados de 09:00 a 18:00; domingos de 10:30 a 20:00.\n* Restricción de Salud Importante: El ascenso no está recomendado para personas con movilidad reducida, problemas cardiovasculares, vértigo o claustrofobia, debido a que el descenso es peatonal por escaleras estrechas de caracol."
   },
   {
     "id": "t35",

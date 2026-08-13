@@ -429,14 +429,24 @@ document.addEventListener("DOMContentLoaded", () => {
                  </div>
 
                  <div class="viability-card info-card">
-                      <div class="card-title-sec">
-                          <span class="monument-name">Museum of Senses</span>
-                          <span class="info-badge">Comprar Online</span>
-                      </div>
-                      <div class="card-body-sec">
-                          <p><strong>Aviso:</strong> Se aconseja comprar online. Entrada familiar (2+2) + 1 adulto adicional = €79 aprox. Incluye kit con medias (la experiencia es sin zapatos) y dulces.</p>
-                      </div>
-                  </div>
+                       <div class="card-title-sec">
+                           <span class="monument-name">Museum of Senses</span>
+                           <span class="info-badge">Comprar Online</span>
+                       </div>
+                       <div class="card-body-sec">
+                           <p><strong>Aviso:</strong> Se aconseja comprar online. Entrada para 1 adulto y 2 niños (11 y 8 años) = desde €49 online. Incluye kit con medias (la experiencia es sin zapatos) y dulces.</p>
+                       </div>
+                   </div>
+
+                  <div class="viability-card info-card">
+                       <div class="card-title-sec">
+                           <span class="monument-name">Legends: The Home of Football</span>
+                           <span class="info-badge">Comprar Online</span>
+                       </div>
+                       <div class="card-body-sec">
+                           <p><strong>Aviso:</strong> Ubicado en Carrera de San Jerónimo, 2 (Puerta del Sol). Entrada para 2 adultos (1 adulto + hijo de 14 años, quien abona como adulto de 14+ años) = desde €45.80 online. Última admisión a las 18:30. Duración aprox. 1.5 - 2 horas.</p>
+                       </div>
+                   </div>
 
                  <div class="viability-card info-card">
                      <div class="card-title-sec">
