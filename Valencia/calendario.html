@@ -45,25 +45,25 @@
             /* Outlook dark green tone or neutral */
         }
 
-        .back-btn {
+        .close-btn {
             text-decoration: none;
-            color: #0078d4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-
-        .back-btn:hover {
+            color: #323130;
             background-color: #f3f2f1;
+            border: 1px solid #e1dfdd;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
         }
 
-        .back-btn i {
-            font-size: 20px;
-            font-weight: 300;
+        .close-btn:hover {
+            background-color: #d13438;
+            color: #ffffff;
+            border-color: #d13438;
         }
 
         .calendar-grid {
@@ -182,7 +182,9 @@
     <div class="calendar-container">
         <div class="header">
             <h1>Calendario - España Septiembre 2026</h1>
-            <a href="index.html" class="back-btn" title="Cerrar calendario"><i class="fa-solid fa-xmark"></i></a>
+            <a href="../index.html" class="close-btn" title="Volver al Inicio">
+                <i class="fa-solid fa-xmark"></i> <span>Cerrar</span>
+            </a>
         </div>
 
         <div class="calendar-grid">

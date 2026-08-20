@@ -60,6 +60,7 @@ const PUNTOS_TURISTICOS = [
     "descripcion": "Tour a pie de 2h 30m para una gran introducción a la historia de Madrid. Pasa por Plaza Mayor, Puerta del Sol, Palacio Real (exterior), Catedral de la Almudena y Teatro Real.",
     "imagen": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800",
     "isFreeTour": true,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Plaza+Mayor+Madrid",
     "viability": { "horario": "Llegar 14:45", "tarifas": "Propina libre" },
     "viability_full": "Free Tour SANDEMANs: Duración 2.5 horas. Comienza a las 15:00 en la Plaza Mayor (frente a la Oficina de Turismo) y finaliza en la Plaza de Isabel II (Ópera). Es recomendable reservar online con antelación."

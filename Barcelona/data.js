@@ -352,13 +352,14 @@ const PUNTOS_TURISTICOS = [
     "descripcion": "Duración de 2:00 hs para conocer la historia y puntos principales del centro urbano.",
     "imagen": "https://images.unsplash.com/photo-1522885140904-7b92dbb3e171?w=800",
     "isFreeTour": true,
+    "isReserved": true,
     "link": "https://www.civitatis.com/ar/barcelona/free-tour-barcelona/",
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Placa+de+Catalunya+Barcelona",
     "viability": {
       "horario": "Programas de 9:00 a 19:00 hs.",
-      "tarifas": "Free tour."
+      "tarifas": "Free tour reservado."
     },
-    "viability_full": "Información de Civitatis sobre el Free Tour Barcelona (General):\n* Duración: 2 horas.\n* Horario de Salida: De 09:00 a 19:00 hs (frecuencias cada hora y algunas medias horas).\n* Enlace Oficial: https://www.civitatis.com/ar/barcelona/free-tour-barcelona/\n\nOpera bajo la modalidad de free walking tour (se basa en propinas al guía). Se recomienda realizar reserva digital previa para asegurar el cupo del grupo."
+    "viability_full": "Información de Civitatis sobre el Free Tour Barcelona (General):\n* Duración: 2 horas.\n* Estado: ✅ Reserva confirmada.\n* Horario de Salida: De 09:00 a 19:00 hs (frecuencias cada hora y algunas medias horas).\n* Enlace Oficial: https://www.civitatis.com/ar/barcelona/free-tour-barcelona/\n\nOpera bajo la modalidad de free walking tour (se basa en propinas al guía)."
   },
   {
     "id": "t3",
@@ -457,35 +458,17 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Park Güell (Zona Monumental)",
     "lat": 41.4145,
     "lng": 2.1527,
-    "tiempo": "09:30 - 11:00",
-    "descripcion": "Acceso a primera hora (9:30 am) para mitigar las temperaturas y la masificación.",
+    "tiempo": "09:45 - 11:45",
+    "descripcion": "Entrada reservada para las 10:00 hs. Estar obligatoriamente 15 minutos antes (09:45 hs) en la boletería. Visita libre por cuenta propia.",
     "imagen": "https://images.unsplash.com/photo-1507504038482-76210214dae1?w=800",
     "isFreeTour": false,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Park+Guell+Barcelona",
     "viability": {
-      "horario": "9:30 - 19:30.",
-      "tarifas": "€18.00."
+      "horario": "Estar 09:45 hs (Entrada 10:00 hs).",
+      "tarifas": "Entradas ya compradas."
     },
-    "viability_full": "Park Güell:\n* Regulación de Aforo: Control de acceso a la Zona Monumental regulado con un cupo máximo de 1,400 visitantes por hora. Se requiere reserva en línea anticipada.\n* Horarios en Septiembre: El horario de explotación comercial turística comienza a las 09:30 y finaliza a las 19:30, permitiéndose la estancia dentro del recinto hasta el anochecer.\n* Acceso Vecinal Restringido: El acceso fuera de estas horas comerciales, específicamente en los programas denominados \"Bon Dia Barcelona\" (de 07:00 a 09:30) y \"Bon Vespre Barcelona\" (de 20:00 a 22:00), está reservado de manera exclusiva para los ciudadanos inscritos en el padrón vecinal o registrados en la iniciativa municipal Gaudir Més, quedando estrictamente prohibida la entrada de turistas durante dichos intervalos.\n* Política de Impuntualidad: La impuntualidad en la hora reservada (con un margen de cortesía de solo 30 minutos) anula la validez del billete sin derecho a devolución."
-  },
-  {
-    "id": "t9",
-    "dia": 2,
-    "fecha": "19/9",
-    "nombre": "Civitatis: Free Tour Parque Güell",
-    "lat": 41.4135,
-    "lng": 2.1518,
-    "tiempo": "11:00 - 12:30",
-    "descripcion": "Duración fija de 1:30 hs conectando directamente dentro del recinto.",
-    "imagen": "https://images.unsplash.com/photo-1587974928442-77ad9e2db5ad?w=800",
-    "isFreeTour": true,
-    "link": "https://www.civitatis.com/ar/barcelona/free-tour-parque-guell/",
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Park+Guell+Barcelona",
-    "viability": {
-      "horario": "Salida a las 11:00 hs.",
-      "tarifas": "Free tour."
-    },
-    "viability_full": "Free Tour Parque Güell de Civitatis:\n* Duración: 1 hora 30 minutos.\n* Horario de Salida: 11:00 hs.\n* Enlace Oficial: https://www.civitatis.com/ar/barcelona/free-tour-parque-guell/\n\nNota Crítica: Este tour no incluye el ticket de entrada comercial al Park Güell, el cual debe adquirirse por separado online para poder acceder a la zona monumental con el grupo."
+    "viability_full": "Park Güell:\n* Estado: ✅ Entradas ya compradas (Entrada reservada: 10:00 hs).\n* Presentación: Presentarse obligatoriamente a las 09:45 hs (15 minutos antes) en la boletería / acceso monumental.\n* Recorrido: Recorrido por cuenta propia sin tour guiado grupal.\n* Regulación de Aforo: Cupo regulado de 1,400 visitantes por hora."
   },
   {
     "id": "t10",
@@ -606,12 +589,13 @@ const PUNTOS_TURISTICOS = [
     "descripcion": "Visita al museo del Barça. Tickets ya adquiridos para la franja de las 09:30 hs.",
     "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
     "isFreeTour": false,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Barca+Immersive+Tour+Museu+del+FC+Barcelona",
     "viability": {
       "horario": "Ya Reservado (09:30 hs)",
       "tarifas": "Total pagado €154.50"
     },
-    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Estado: Tickets ya reservados y pagados (Total: €154.50) para el ingreso a las 09:30 hs. Duración estimada de la visita: 2 horas.\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana.\n* Inclusiones de la Visita: Museo del Club (trofeos de Champions, balones de oro, camisetas), Spotify Camp Nou Live (sala inmersiva 360 grados y sonido envolvente), Mirador de la Reconstrucción (plataforma elevada exterior para observar las obras en el estadio) y desafíos interactivos (RoboKeeper, realidad virtual Barça Virtual Dream)."
+    "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Estado: ✅ Tickets ya reservados y pagados (Total: €154.50) para el ingreso a las 09:30 hs. Duración estimada de la visita: 2 horas.\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana."
   },
   {
     "id": "t17",
@@ -948,30 +932,32 @@ const PUNTOS_TURISTICOS = [
     "descripcion": "Recorrido interior con audioguía inteligente. Tickets ya adquiridos para la franja de las 18:00 hs.",
     "imagen": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800",
     "isFreeTour": false,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Casa+Batllo+Barcelona",
     "viability": {
       "horario": "Ya Reservado (18:00 hs)",
       "tarifas": "Total pagado €117"
     },
-    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia.\n* Estado: Tickets ya reservados y pagados (Total: €117) para el ingreso a las 18:00 hs. Duración estimada de la visita: 1 hora y 30 minutos.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea."
+    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia.\n* Estado: ✅ Tickets ya reservados y pagados (Total: €117) para el ingreso a las 18:00 hs. Duración estimada de la visita: 1 hora y 30 minutos.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea."
   },
   {
     "id": "t30",
     "dia": 4,
     "fecha": "21/9",
-    "nombre": "Casa Amatller",
+    "nombre": "Casa Amatller (Fachada Exterior)",
     "lat": 41.3915,
     "lng": 2.1651,
-    "tiempo": "16:30 - 17:45",
-    "descripcion": "Visita autoguiada interactiva con taza de chocolate caliente tradicional al final (cierre a las 19:00).",
+    "tiempo": "16:30 - 16:45",
+    "descripcion": "Paseo y contemplación de la fachada de la Casa Amatller de Puig i Cadafalch desde el exterior (sin visita interior).",
     "imagen": "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800",
     "isFreeTour": false,
+    "isReserved": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Casa+Amatller+Barcelona",
     "viability": {
-      "horario": "10:00 - 19:00 hs.",
-      "tarifas": "€21.00 a €25.00 online."
+      "horario": "Paseo exterior breve",
+      "tarifas": "Gratuito (vista exterior)"
     },
-    "viability_full": "Casa Amatller:\n* Horario: Lunes a domingo de 10:00 a 19:00.\n* Tarifas: Entrada general de €21.00 a €25.00 online (incluye tableta interactiva para la visita autoguiada y una taza de chocolate caliente tradicional de la marca Amatller al finalizar el recorrido).\n* Gratuidad: Los menores de 7 años entran gratis."
+    "viability_full": "Casa Amatller:\n* Recorrido: Parada panorámica exterior de 15 minutos para tomar fotos de la impresionante fachada de Puig i Cadafalch. No se realiza visita interior."
   },
   {
     "id": "t31",
@@ -1038,12 +1024,13 @@ const PUNTOS_TURISTICOS = [
     "descripcion": "15:45 hs entrada general al templo. 17:15 hs subida a la Torre de la Pasión.",
     "imagen": "https://images.unsplash.com/photo-1585699324551-f6c309eed262?w=800",
     "isFreeTour": false,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
     "viability": {
       "horario": "Ya Reservado (15:45 hs)",
       "tarifas": "Total pagado €118"
     },
-    "viability_full": "Basílica de la Sagrada Familia:\n* Estado: Tickets ya reservados y pagados (Total: €118) con entrada a las 15:45 hs y subida a la Torre de la Pasión a las 17:15 hs.\n* Horario de Apertura en Septiembre: Lunes a viernes de 09:00 a 20:00; sábados de 09:00 a 18:00; domingos de 10:30 a 20:00.\n* Restricción de Salud Importante: El ascenso no está recomendado para personas con movilidad reducida, problemas cardiovasculares, vértigo o claustrofobia, debido a que el descenso es peatonal por escaleras estrechas de caracol."
+    "viability_full": "Basílica de la Sagrada Familia:\n* Estado: ✅ Tickets ya reservados y pagados (Total: €118) con entrada a las 15:45 hs y subida a la Torre de la Pasión a las 17:15 hs."
   },
   {
     "id": "t35",
@@ -1080,5 +1067,32 @@ const PUNTOS_TURISTICOS = [
       "tarifas": "€18.00."
     },
     "viability_full": "Torre Glòries:\n* Características: Rascacielos diseñado por Jean Nouvel, característico por su silueta de bala y su iluminación exterior variable mediante paneles de vidrio.\n* Horarios en Septiembre: De lunes a domingo de 10:00 a 21:00.\n* Tarifas: El acceso básico (Hyperview Barcelona + Mirador de la planta 30 a 125 metros de altura) cuesta €18.00 online. El acceso a la escultura suspendida Cloud Cities requiere suplemento de pago directo."
+  },
+  {
+    "id": "t_alamo",
+    "dia": 6,
+    "fecha": "23/9",
+    "nombre": "Retiro de Vehículo en Alamo",
+    "lat": 41.3857,
+    "lng": 2.1706,
+    "tiempo": "08:00 hs",
+    "descripcion": "Retiro de vehículo en Alamo Rent a Car (Parking Planta -1). Ubicación: Carrer de Rivadeneyra, 3, Ciutat Vella, 08002 Barcelona.",
+    "imagen": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800",
+    "isFreeTour": false,
+    "isReserved": true,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Carrer+de+Rivadeneyra+3+Parking+08002+Barcelona",
+    "reminder": {
+      "title": "RECORDATORIO IMPRESCINDIBLE PARA EL RETIRO:",
+      "items": [
+        "💳 Tarjeta AMEX Santander",
+        "🪪 Carnet de conducir (Licencia vigente)",
+        "🛂 Pasaporte (Original)"
+      ]
+    },
+    "viability": {
+      "horario": "08:00 hs",
+      "tarifas": "Reserva confirmada"
+    },
+    "viability_full": "⚠️ RECORDATORIO IMPRESCINDIBLE PARA EL RETIRO EN ALAMO:\n\nDeberás presentar obligatoriamente en mostrador:\n• Tarjeta AMEX Santander\n• Carnet de conducir (Licencia física y vigente)\n• Pasaporte (Físico original)\n\nDirección exacta del Parking: Carrer de Rivadeneyra, 3, Parking. Planta -1, Ciutat Vella, 08002 Barcelona, España."
   }
 ];

@@ -301,6 +301,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                 }
 
+                let reservedBadge = "";
+                if (pt.isReserved) {
+                    reservedBadge = `
+                        <div class="reserved-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-circle-check"></i> ✅ Reservado
+                        </div>
+                    `;
+                }
+
                 let viabilityHtml = "";
                 if (pt.viability) {
                     viabilityHtml = `
@@ -314,6 +323,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                 }
 
+                let reminderHtml = "";
+                if (pt.reminder) {
+                    reminderHtml = `
+                        <div class="reminder-banner" style="background: rgba(239, 68, 68, 0.12); border-left: 4px solid #ef4444; border-radius: 8px; padding: 10px 12px; margin: 8px 0; border: 1px solid rgba(239, 68, 68, 0.25);">
+                            <div style="font-weight: 700; color: #dc2626; font-size: 0.82rem; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                                <i class="fa-solid fa-triangle-exclamation"></i> ${pt.reminder.title}
+                            </div>
+                            <ul style="margin: 0; padding-left: 16px; color: var(--text-main); font-size: 0.8rem; line-height: 1.6; font-weight: 500;">
+                                ${pt.reminder.items.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+
                 let detailBtnHtml = `
                     <button class="btn-primary detail-modal-btn" style="margin-top: 8px; width: 100%; justify-content: center; background-color: var(--accent-color);" onclick="event.stopPropagation();">
                         Ver Detalles <i class="fa-solid fa-expand"></i>
@@ -322,13 +345,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 ptCard.innerHTML = `
                     <div class="tourist-header">
-                        <div class="tourist-title-container">
+                        <div class="tourist-title-container" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                             <div class="tourist-title">${pt.nombre}</div>
                             ${freeTourBadge}
+                            ${reservedBadge}
                         </div>
                         <span class="time-badge"><i class="fa-regular fa-clock"></i> ${pt.tiempo}</span>
                     </div>
                     <div class="tourist-desc">${pt.descripcion}</div>
+                    ${reminderHtml}
                     ${viabilityHtml}
                     ${detailBtnHtml}
                 `;
@@ -355,13 +380,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Modal Control Functions
     function openModal(pt) {
-        modalDayBadge.textContent = `Día ${pt.dia}`;
+        if (pt.isReserved) {
+            modalDayBadge.innerHTML = `Día ${pt.dia} <span style="margin-left: 6px; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 8px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.4);">✅ Reservado</span>`;
+        } else {
+            modalDayBadge.textContent = `Día ${pt.dia}`;
+        }
         modalTimeSpan.textContent = pt.tiempo;
         modalTitle.textContent = pt.nombre;
         modalDescription.textContent = pt.descripcion;
 
         // Set full viability paragraph text
-        modalViabilityText.textContent = pt.viability_full || "Información de acceso libre y de libre tránsito.";
+        let fullText = pt.viability_full || "Información de acceso libre y de libre tránsito.";
+        if (pt.reminder) {
+            fullText = `⚠️ ${pt.reminder.title}\n` + pt.reminder.items.map(i => `• ${i}`).join('\n') + `\n\n` + fullText;
+        }
+        modalViabilityText.textContent = fullText;
 
         // Set Google Maps link
         if (pt.maps_link) {
@@ -413,11 +446,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="viability-card info-card">
                     <div class="card-title-sec">
                         <span class="monument-name">Park Güell (Zona Monumental)</span>
-                        <span class="warning-badge">2-3 semanas antes</span>
+                        <span class="warning-badge">Entrada 10:00 hs</span>
                     </div>
                     <div class="card-body-sec">
                         <p><strong>Tarifas:</strong> €18.00 general | €13.50 niños/mayores.</p>
-                        <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Aviso:</strong> Acceso a primera hora (9:30 am) ideal para evitar calor y masas. Retraso máximo tolerado: 30 minutos.</p>
+                        <p class="warning-text"><i class="fa-solid fa-triangle-exclamation"></i> <strong>Aviso Importante:</strong> Presentarse en boletería obligatoriamente a las <strong>09:45 hs (15 minutos antes)</strong> de la entrada reservada.</p>
                     </div>
                 </div>
 
@@ -458,6 +491,21 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="viability-category">
                 <div class="category-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--color-hoteles);"></i> Alertas Logísticas Críticas</div>
                 
+                <div class="viability-card alert-card" style="border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.05);">
+                    <div class="card-title-sec">
+                        <span class="alert-title-text" style="color: #dc2626;"><i class="fa-solid fa-key"></i> Documentación Obligatoria Retiro Auto (Alamo)</span>
+                    </div>
+                    <div class="card-body-sec">
+                        <p><strong>Fecha y Hora:</strong> Miércoles 23/9 a las 08:00 hs (Carrer de Rivadeneyra, 3, Parking Planta -1).</p>
+                        <p style="margin-top: 6px;"><strong>Documentos Obligatorios a Presentar:</strong></p>
+                        <ul style="margin: 4px 0 0 18px; line-height: 1.6;">
+                            <li>💳 <strong>Tarjeta AMEX Santander</strong></li>
+                            <li>🪪 <strong>Carnet de conducir</strong> (Licencia física vigente)</li>
+                            <li>🛂 <strong>Pasaporte</strong> (Original)</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="viability-card alert-card">
                     <div class="card-title-sec">
                         <span class="alert-title-text"><i class="fa-solid fa-circle-xmark"></i> Laberinto de Horta en Restauración</span>

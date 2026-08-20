@@ -45,25 +45,25 @@
             /* Outlook dark green tone or neutral */
         }
 
-        .back-btn {
+        .close-btn {
             text-decoration: none;
-            color: #0078d4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-
-        .back-btn:hover {
+            color: #323130;
             background-color: #f3f2f1;
+            border: 1px solid #e1dfdd;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
         }
 
-        .back-btn i {
-            font-size: 20px;
-            font-weight: 300;
+        .close-btn:hover {
+            background-color: #d13438;
+            color: #ffffff;
+            border-color: #d13438;
         }
 
         .calendar-grid {
@@ -182,10 +182,9 @@
     <div class="calendar-container">
         <div class="header">
             <h1>Calendario - España Septiembre 2026</h1>
-            <div style="display: flex; gap: 10px;">
-                <a href="../index.html" class="back-btn" title="Volver a la Home Page" style="width: auto; padding: 0 10px; gap: 8px;"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="../index.html" class="back-btn" title="Cerrar calendario"><i class="fa-solid fa-xmark"></i></a>
-            </div>
+            <a href="../index.html" class="close-btn" title="Volver al Inicio">
+                <i class="fa-solid fa-xmark"></i> <span>Cerrar</span>
+            </a>
         </div>
 
         <div class="calendar-grid">
@@ -230,7 +229,7 @@
             <div class="day-cell">
                 <div class="date-number">19 <i class="fa-regular fa-building icon"></i></div>
                 <div class="event-bar bg-bcn"><i class="fa-solid fa-location-dot"></i> Barcelona</div>
-                <div class="event-detail"><b>Modernismo:</b> Park Güell, Tibidabo, Pedrera</div>
+                <div class="event-detail"><b>Modernismo:</b> Park Güell (Entrada 10:00, estar 09:45 en boletería), Tibidabo, Pedrera</div>
             </div>
 
             <!-- Week 2: Sept 20 to Sept 26 -->
@@ -253,9 +252,9 @@
             </div>
 
             <div class="day-cell">
-                <div class="date-number">23 <i class="fa-solid fa-ticket icon"></i></div>
-                <div class="event-bar bg-park"><i class="fa-solid fa-roller-coaster"></i> PortAventura</div>
-                <div class="event-detail"><b>08:00</b> Alquiler de auto<br>Día en parque de diversiones</div>
+                <div class="date-number">23 <i class="fa-solid fa-car icon"></i></div>
+                <div class="event-bar bg-park"><i class="fa-solid fa-key"></i> Alamo / PortAventura</div>
+                <div class="event-detail"><b>08:00</b> Retiro auto Alamo (Carrer de Rivadeneyra 3, Planta -1).<br><span style="color:#d32f2f; font-weight:600;"><i class="fa-solid fa-triangle-exclamation"></i> Llevar AMEX Santander, Carnet conducir y Pasaporte.</span><br>Día en PortAventura World.</div>
             </div>
 
             <div class="day-cell">

@@ -302,6 +302,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                 }
 
+                let reservedBadge = "";
+                if (pt.isReserved) {
+                    reservedBadge = `
+                        <div class="reserved-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-circle-check"></i> ✅ Reservado
+                        </div>
+                    `;
+                }
+
                 let viabilityHtml = "";
                 if (pt.viability) {
                     viabilityHtml = `
@@ -323,9 +332,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 ptCard.innerHTML = `
                     <div class="tourist-header">
-                        <div class="tourist-title-container">
+                        <div class="tourist-title-container" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                             <div class="tourist-title">${pt.nombre}</div>
                             ${freeTourBadge}
+                            ${reservedBadge}
                         </div>
                         <span class="time-badge"><i class="fa-regular fa-clock"></i> ${pt.tiempo}</span>
                     </div>
@@ -356,7 +366,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Modal Control Functions
     function openModal(pt) {
-        modalDayBadge.textContent = `Día ${pt.dia}`;
+        if (pt.isReserved) {
+            modalDayBadge.innerHTML = `Día ${pt.dia} <span style="margin-left: 6px; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 8px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.4);">✅ Reservado</span>`;
+        } else {
+            modalDayBadge.textContent = `Día ${pt.dia}`;
+        }
         modalTimeSpan.textContent = pt.tiempo;
         modalTitle.textContent = pt.nombre;
         modalDescription.textContent = pt.descripcion;
