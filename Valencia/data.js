@@ -274,16 +274,16 @@ const PUNTOS_TURISTICOS = [
     "id": "v8",
     "dia": 2,
     "fecha": "25/9",
-    "nombre": "Bioparc Valencia",
+    "nombre": "Bioparc Valencia y Almuerzo",
     "lat": 39.4782,
     "lng": -0.4079,
-    "tiempo": "10:00 - 13:30",
-    "descripcion": "Zoológico de zooinmersión que recrea la sabana y África.",
+    "tiempo": "10:00 - 14:30",
+    "descripcion": "Recorrido de 4h30m de zooinmersión que recrea la sabana y África, con almuerzo dentro del parque en el Restaurante BIOPARC.",
     "imagen": "https://images.unsplash.com/photo-1595166297059-e68f3a39e7b2?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Bioparc+Valencia",
     "viability": { "horario": "10:00 - 18:00", "tarifas": "€32.50" },
-    "viability_full": "Bioparc Valencia: Abre a las 10:00. General: €32,50. Infantil (4 a 12): €25,50."
+    "viability_full": "Bioparc Valencia: Abre a las 10:00 hs. General: €32,50. Infantil (4 a 12): €25,50. Almuerzo en restaurante interior con vistas a los animales."
   },
   {
     "id": "v9",
@@ -292,13 +292,13 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Parque de Cabecera",
     "lat": 39.4766,
     "lng": -0.4082,
-    "tiempo": "13:30 - 15:00",
-    "descripcion": "Almuerzo y pícnic cerca de Bioparc.",
+    "tiempo": "14:30 - 15:30",
+    "descripcion": "Paseo de 1 hora por el parque aledaño a Bioparc, con su gran lago artificial y colina panorámica.",
     "imagen": "https://images.unsplash.com/photo-1631776516391-4e782beba048?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Parque+de+Cabecera+Valencia",
     "viability": { "horario": "Libre", "tarifas": "Gratuito" },
-    "viability_full": "Parque de Cabecera: Ideal para almorzar o hacer un picnic."
+    "viability_full": "Parque de Cabecera: 1 hora de paseo por los jardines colindantes a Bioparc."
   },
   {
     "id": "v10",
@@ -307,8 +307,8 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Sendero del Turia",
     "lat": 39.4768,
     "lng": -0.3697,
-    "tiempo": "15:00 - 16:00",
-    "descripcion": "Caminata por el antiguo cauce del río Turia, seguro y plano.",
+    "tiempo": "15:30 - 16:30",
+    "descripcion": "Caminata por el antiguo cauce del río Turia en dirección al Gulliver.",
     "imagen": "https://images.unsplash.com/photo-1596707246564-94944d18ec27?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Jardines+del+Turia+Valencia",
@@ -322,7 +322,7 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Parque Gulliver",
     "lat": 39.4628,
     "lng": -0.3592,
-    "tiempo": "16:00 - 17:30",
+    "tiempo": "16:30 - 18:30",
     "descripcion": "Escultura gigante de 70m del personaje Gulliver transformado en toboganes.",
     "imagen": "https://images.unsplash.com/photo-1628178184511-2e65c0be3db8?w=800",
     "isFreeTour": false,
@@ -331,19 +331,19 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Parque Gulliver: Septiembre de 10:00 a 20:00 ininterrumpido. Acceso libre y gratuito."
   },
   {
-    "id": "v12",
+    "id": "v12_auto",
     "dia": 2,
     "fecha": "25/9",
-    "nombre": "Mestalla Forever Tour",
-    "lat": 39.4746,
-    "lng": -0.3582,
-    "tiempo": "17:30 - 19:00",
-    "descripcion": "Tour guiado por el estadio más antiguo de Primera División española.",
-    "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
+    "nombre": "Devolución de Auto (Estación de Tren)",
+    "lat": 39.4664,
+    "lng": -0.3774,
+    "tiempo": "19:00 - 20:30",
+    "descripcion": "Devolución del vehículo alquilado en la oficina de la Estación de Tren de Valencia (límite hasta las 21:00 hs).",
+    "imagen": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800",
     "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Estadio+Mestalla+Valencia",
-    "viability": { "horario": "Último pase 17:30", "tarifas": "€16.10" },
-    "viability_full": "Mestalla Tour: El último pase es a las 17:30 h. General: €16,10. Reducida: €13,50."
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Estacion+Joaquin+Sorolla+Valencia",
+    "viability": { "horario": "Hasta las 21:00 hs", "tarifas": "Devolución de auto" },
+    "viability_full": "Devolución del automóvil en la Estación de Tren de Valencia (Joaquín Sorolla / Estació del Nord) con horario límite hasta las 21:00 hs."
   },
 
   // DIA 3 (26/9)
@@ -354,13 +354,13 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Museo de las Ciencias Príncipe Felipe",
     "lat": 39.4561,
     "lng": -0.3540,
-    "tiempo": "10:00 - 12:30",
+    "tiempo": "10:00 - 12:15",
     "descripcion": "Espacio interactivo de divulgación científica en Ciudad de las Artes y Ciencias.",
     "imagen": "https://images.unsplash.com/photo-1606822292150-1c6dc001a1e0?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Museo+de+las+Ciencias+Valencia",
     "viability": { "horario": "10:00 - 19:00", "tarifas": "Combinada" },
-    "viability_full": "Museo de las Ciencias: Abre a las 10:00 h. Cerrará a las 19:00 h (fin de semana)."
+    "viability_full": "Museo de las Ciencias: Abre a las 10:00 h. Visita interactiva matutina."
   },
   {
     "id": "v14",
@@ -369,8 +369,8 @@ const PUNTOS_TURISTICOS = [
     "nombre": "El Umbracle",
     "lat": 39.4542,
     "lng": -0.3533,
-    "tiempo": "12:30 - 13:15",
-    "descripcion": "Paseo ajardinado con arcos flotantes, increíbles vistas al complejo.",
+    "tiempo": "12:15 - 12:45",
+    "descripcion": "Paseo ajardinado con arcos flotantes e increíbles perspectivas del complejo futurista.",
     "imagen": "https://images.unsplash.com/photo-1536768393526-728b9c642220?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=El+Umbracle+Valencia",
@@ -381,31 +381,31 @@ const PUNTOS_TURISTICOS = [
     "id": "v15",
     "dia": 3,
     "fecha": "26/9",
-    "nombre": "Almuerzo cerca de CAC",
+    "nombre": "Almuerzo Familiar",
     "lat": 39.4548,
     "lng": -0.3479,
-    "tiempo": "13:15 - 14:45",
-    "descripcion": "Almuerzo en Centro Comercial Aqua, El Saler o restaurante tradicional.",
+    "tiempo": "12:45 - 13:30",
+    "descripcion": "Almuerzo previo a ingresar a L'Oceanogràfic en CC Aqua / El Saler o restaurantes cercanos.",
     "imagen": "https://images.unsplash.com/photo-1544378730-8b5105260846?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Aqua+Multiespacio+Valencia",
     "viability": { "horario": "Libre", "tarifas": "Variable" },
-    "viability_full": "Recomendaciones: Centros comerciales cercanos."
+    "viability_full": "Almuerzo post-visitas de la mañana."
   },
   {
     "id": "v16",
     "dia": 3,
     "fecha": "26/9",
-    "nombre": "El Ágora (CaixaForum)",
+    "nombre": "El Ágora (Hall de CaixaForum)",
     "lat": 39.4533,
     "lng": -0.3498,
-    "tiempo": "14:45 - 15:30",
-    "descripcion": "Llamativo edificio azul metálico, entrada libre a tienda/cafetería.",
+    "tiempo": "13:30 - 14:00",
+    "descripcion": "Recorrido de 30 min máx. únicamente por el hall/vestíbulo del edificio para admirar su arquitectura interior. Sin pago de entrada a exposiciones (€0).",
     "imagen": "https://images.unsplash.com/photo-1587330933367-183cb53a5f54?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=CaixaForum+Valencia",
-    "viability": { "horario": "10:00 - 20:00", "tarifas": "Gratuito/€6.00 expo" },
-    "viability_full": "El Ágora (CaixaForum): Entrada general €6,00. Menores de 16: gratis."
+    "viability": { "horario": "Hall 30 min máx", "tarifas": "Gratuito (€0 hall)" },
+    "viability_full": "Hall de CaixaForum Valencia (El Ágora): Recorrido breve de 30 minutos máx. por el vestíbulo y tienda sin pagar entradas a exposiciones."
   },
   {
     "id": "v17",
@@ -414,13 +414,13 @@ const PUNTOS_TURISTICOS = [
     "nombre": "L'Oceanogràfic",
     "lat": 39.4532,
     "lng": -0.3475,
-    "tiempo": "15:30 - 19:00",
-    "descripcion": "El acuario más grande de Europa. Túnel de tiburones, belugas y delfinario.",
+    "tiempo": "14:00 - 20:00",
+    "descripcion": "Ingreso a las 14:00 hs máx. (post almuerzo). El acuario más grande de Europa abierto el sábado de septiembre hasta las 20:00 hs.",
     "imagen": "https://images.unsplash.com/photo-1517457210636-62ce9c095a1c?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Oceanografic+Valencia",
-    "viability": { "horario": "Hasta 20:00 (Sáb)", "tarifas": "Combinada" },
-    "viability_full": "L'Oceanogràfic: Cierre 20:00 h el sábado. Combinada con Museo de Ciencias muy recomendada."
+    "viability": { "horario": "14:00 - 20:00 hs", "tarifas": "Entrada Combinada" },
+    "viability_full": "L'Oceanogràfic: Ingreso como máximo a las 14:00 hs (post almuerzo). Abierto el sábado de septiembre hasta las 20:00 hs."
   },
 
   // DIA 4 (27/9)

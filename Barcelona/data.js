@@ -328,8 +328,8 @@ const PUNTOS_TURISTICOS = [
     "dia": 1,
     "fecha": "18/9",
     "nombre": "Plaza Cataluña y Las Ramblas",
-    "lat": 41.3870,
-    "lng": 2.1700,
+    "lat": 41.387,
+    "lng": 2.17,
     "tiempo": "09:00 - 10:00",
     "descripcion": "Paseo peatonal inicial por el centro de la ciudad.",
     "imagen": "https://images.unsplash.com/photo-1587330933367-183cb53a5f54?w=800",
@@ -346,8 +346,8 @@ const PUNTOS_TURISTICOS = [
     "dia": 1,
     "fecha": "18/9",
     "nombre": "Civitatis: Free Tour Barcelona (General)",
-    "lat": 41.3870,
-    "lng": 2.1700,
+    "lat": 41.387,
+    "lng": 2.17,
     "tiempo": "10:00 - 12:00",
     "descripcion": "Duración de 2:00 hs para conocer la historia y puntos principales del centro urbano.",
     "imagen": "https://images.unsplash.com/photo-1522885140904-7b92dbb3e171?w=800",
@@ -367,7 +367,7 @@ const PUNTOS_TURISTICOS = [
     "fecha": "18/9",
     "nombre": "Almuerzo en el Mercado de la Boquería",
     "lat": 41.3819,
-    "lng": 2.1720,
+    "lng": 2.172,
     "tiempo": "12:00 - 13:30",
     "descripcion": "Horario oficial de 8:00 a 20:30. Ubicado en este día para evitar el domingo (cierre absoluto).",
     "imagen": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800",
@@ -477,7 +477,7 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Almuerzo en el Barrio de Gracia",
     "lat": 41.4022,
     "lng": 2.1573,
-    "tiempo": "12:30 - 14:30",
+    "tiempo": "11:45 - 14:30",
     "descripcion": "Descenso peatonal hacia las terrazas locales de la Plaza del Sol o de la Virreina.",
     "imagen": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
     "isFreeTour": false,
@@ -561,24 +561,6 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "El Nacional:\n* Acceso: Entrada libre y sin reserva previa para el acceso a las instalaciones.\n* Interés: Antigua nave industrial del siglo XIX (antiguo teatro y garaje) reconvertida por el interiorista Lázaro Rosa-Violán en un multiespacio de restauración de estética modernista. Cuenta con cuatro restaurantes temáticos y cuatro barras de bebidas."
   },
   {
-    "id": "t15",
-    "dia": 5,
-    "fecha": "22/9",
-    "nombre": "Palau de la Música Catalana",
-    "lat": 41.3875,
-    "lng": 2.1753,
-    "tiempo": "09:30 - 11:00",
-    "descripcion": "Visita turística diurna autoguiada en su horario de mañana.",
-    "imagen": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Palau+de+la+Musica+Catalana+Barcelona",
-    "viability": {
-      "horario": "9:00 - 15:30 hs.",
-      "tarifas": "€16.00 online."
-    },
-    "viability_full": "Palau de la Música Catalana:\n* Acceso: Visitas turísticas diurnas de lunes a domingo de 09:00 a 15:30.\n* Tarifas: €16.00 con audioguía interactiva si se adquiere online anticipadamente (asciende a €20.00-€22.00 por otros canales de reventa).\n* Cafè Palau: Ubicado en el vestíbulo del edificio con columnas de mosaicos; acceso libre operativo de 09:00 a 24:00."
-  },
-  {
     "id": "t32",
     "dia": 3,
     "fecha": "20/9",
@@ -598,50 +580,32 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "FC Barcelona - Barça Immersive Tour:\n* Estado: ✅ Tickets ya reservados y pagados (Total: €154.50) para el ingreso a las 09:30 hs. Duración estimada de la visita: 2 horas.\n* Obras del Estadio Camp Nou: El recorrido tradicional por el estadio está suspendido debido a reconstrucción. Se visita la gran exposición interactiva provisional de 2,400 m² junto al Palau Blaugrana."
   },
   {
-    "id": "t17",
-    "dia": 3,
-    "fecha": "20/9",
-    "nombre": "Plaza de España",
-    "lat": 41.3750,
-    "lng": 2.1491,
-    "tiempo": "11:30 - 12:00",
-    "descripcion": "Visita a la zona monumental de la plaza.",
-    "imagen": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Plaza+de+Espana+Barcelona",
-    "viability": {
-      "horario": "Acceso libre.",
-      "tarifas": "Gratuito."
-    },
-    "viability_full": "Plaza de España, punto de inicio para ascender a Montjuïc, rodeada de las Torres Venecianas."
-  },
-  {
     "id": "t18",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Mirador del Centro Comercial Arenas",
+    "nombre": "Centro Comercial Arenas y Almuerzo",
     "lat": 41.3761,
     "lng": 2.1495,
-    "tiempo": "12:00 - 12:30",
-    "descripcion": "Ascenso gratuito por escaleras mecánicas interiores para una vista panorámica de 360 grados.",
+    "tiempo": "11:30 - 13:30",
+    "descripcion": "2 horas dedicadas al Centro Comercial Arenas. Recorrido comercial, mirador panorámico de 360° en la azotea y almuerzo en sus restaurantes.",
     "imagen": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Centro+Comercial+Arenas+Barcelona",
     "viability": {
-      "horario": "9:00 - 22:00 hs.",
-      "tarifas": "Gratis por escaleras internas | €1.00 por ascensor externo."
+      "horario": "09:00 - 22:00 hs.",
+      "tarifas": "Gratis por escaleras internas | Consumo libre."
     },
-    "viability_full": "Plaza de España y Centro Comercial Arenas:\n* Mirador de Arenas: Terraza superior circular de 360 grados de la antigua plaza de toros.\n* Ascenso gratuito: A través de las escaleras mecánicas interiores del centro comercial.\n* Ascensor exterior: El ascensor acristalado exterior tiene una tarifa de €1.00 por viaje."
+    "viability_full": "Plaza de España y Centro Comercial Arenas:\n* Mirador de Arenas: Terraza superior circular de 360 grados de la antigua plaza de toros.\n* Ascenso gratuito: A través de las escaleras mecánicas interiores del centro comercial.\n* Almuerzo: Variada oferta gastronómica en la planta superior de restaurantes con vistas a Plaza de España."
   },
   {
     "id": "t_poble",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Poble Espanyol y Almuerzo",
+    "nombre": "Poble Espanyol",
     "lat": 41.3687,
     "lng": 2.1472,
-    "tiempo": "12:30 - 15:30",
-    "descripcion": "Visita de 2h30m al recinto y 30 minutos extras para almorzar dentro.",
+    "tiempo": "14:00 - 17:00",
+    "descripcion": "Entrada al Poble Espanyol a las 14:00 hs. Recorrido de 3 horas por el museo arquitectónico al aire libre y sus talleres artesanales.",
     "imagen": "https://images.unsplash.com/photo-1587330933367-183cb53a5f54?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Poble+Espanyol+Barcelona",
@@ -649,17 +613,17 @@ const PUNTOS_TURISTICOS = [
       "horario": "10:00 - 20:00 hs.",
       "tarifas": "€56.40 (ticket grupo anticipado)."
     },
-    "viability_full": "Poble Espanyol:\n* Museo arquitectónico al aire libre ubicado en Montjuïc.\n* Entrada anticipada obligatoria para asegurar disponibilidad.\n* Dentro del recinto hay múltiples opciones de restauración para almorzar."
+    "viability_full": "Poble Espanyol:\n* Museo arquitectónico al aire libre ubicado en Montjuïc con réplicas de la arquitectura tradicional española.\n* Entrada anticipada obligatoria para asegurar disponibilidad."
   },
   {
     "id": "t19",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Traslado al Castillo (Bus 150)",
-    "lat": 41.3690,
-    "lng": 2.1560,
-    "tiempo": "15:30 - 16:00",
-    "descripcion": "Uso del Autobús 150 desde Plaza de España directo hasta la cumbre de la montaña.",
+    "nombre": "Traslado al Castillo de Montjuïc (Bus 150)",
+    "lat": 41.369,
+    "lng": 2.156,
+    "tiempo": "17:00 - 17:30",
+    "descripcion": "Traslado en autobús 150 desde Av. Estadi / Plaza de España directo a la cumbre del Castillo.",
     "imagen": "https://images.unsplash.com/photo-1612456425712-4c281df6fa30?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Castillo+de+Montjuic+Barcelona",
@@ -667,7 +631,7 @@ const PUNTOS_TURISTICOS = [
       "horario": "Frecuencia regular.",
       "tarifas": "Sencillo (€2.50)."
     },
-    "viability_full": "Traslado y Logística a Montjuïc:\n* Acceso sugerido: Se puede subir cómodamente en el autobús 150 desde Plaza de España directo a la cumbre de la montaña, o combinando el Funicular + el Teleférico de Montjuïc (TMB) que conecta con la estación superior Castell."
+    "viability_full": "Traslado a la cumbre de Montjuïc en la línea de Autobús 150 para conectar la franja de Poble Espanyol con la reserva del Castillo."
   },
   {
     "id": "t20",
@@ -676,52 +640,71 @@ const PUNTOS_TURISTICOS = [
     "nombre": "Castillo de Montjuïc",
     "lat": 41.3638,
     "lng": 2.1666,
-    "tiempo": "16:00 - 18:00",
-    "descripcion": "Entrada gratuita (domingos a partir de las 15:00 hs). Tiempo para recorrer las murallas, patio de armas y el mirador de 360 grados.",
+    "tiempo": "17:30 - 19:00",
+    "descripcion": "Entrada reservada para las 17:30 hs. Visita de 1h 30m recorriendo murallas, patio de armas y contemplando las vistas panorámicas de 360°.",
     "imagen": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800",
     "isFreeTour": false,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Castillo+de+Montjuic+Barcelona",
     "viability": {
-      "horario": "10:00 - 20:00 hs.",
-      "tarifas": "€12.00 general | Gratis domingos desde las 15:00 hs."
+      "horario": "Entrada Reservada (17:30 hs)",
+      "tarifas": "✅ Entradas Reservadas (Visita 17:30 - 19:00 hs)."
     },
-    "viability_full": "Castillo de Montjuïc:\n* Mirador: Excelente mirador de 360 grados de la ciudad, el puerto y el litoral marítimo.\n* Horarios en Septiembre: Lunes a domingo de 10:00 a 20:00 (último acceso 30 min antes).\n* Tarifas: Entrada general €12.00, tarifa reducida €8.00.\n* Gratuidad: Gratuito los domingos a partir de las 15:00 hs y todo el primer domingo de cada mes. Se recomienda reservar de 1.5 a 2 horas para la visita."
+    "viability_full": "Castillo de Montjuïc:\n* Estado: ✅ Entradas reservadas para las 17:30 hs.\n* Visita de 1h 30m por murallas, miradores y patio de armas.\n* Mirador: Impresionante panorámica de 360 grados de Barcelona y el puerto."
   },
   {
     "id": "t21",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Descenso a pie por Montjuïc",
-    "lat": 41.3680,
-    "lng": 2.1590,
-    "tiempo": "18:00 - 19:30",
-    "descripcion": "Caminata cuesta abajo cruzando los jardines perimetrales y miradores hacia la base de la colina.",
+    "nombre": "Descenso a pie a Poble Sec",
+    "lat": 41.368,
+    "lng": 2.159,
+    "tiempo": "19:00 - 19:30",
+    "descripcion": "Caminata de 30 minutos cuesta abajo desde el Castillo cruzando los miradores de Miramar y jardines perimetrales hasta Poble Sec.",
     "imagen": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800",
     "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Castillo+de+Montjuic+Barcelona",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Poble+Sec+Barcelona",
     "viability": {
-      "horario": "Paseo diurno.",
+      "horario": "Descenso peatonal.",
       "tarifas": "Gratuito."
     },
-    "viability_full": "Logística en Montjuïc: Se recomienda reservar entre 1.5 y 2 horas para pasear y realizar el descenso caminando cuesta abajo desde el castillo, cruzando los miradores de Miramar y jardines perimetrales hacia la base."
+    "viability_full": "Descenso caminando a pie durante 30 minutos desde el Castillo hacia el barrio de Poble Sec."
   },
   {
     "id": "t22",
     "dia": 3,
     "fecha": "20/9",
-    "nombre": "Cena de Pinchos en Poble Sec (Carrer Blai)",
+    "nombre": "Cena de Pinchos en Poble Sec (La Tasqueta de Blai)",
     "lat": 41.3742,
     "lng": 2.1627,
-    "tiempo": "19:30 - 21:15",
-    "descripcion": "Eje gastronómico de pinchos a bajo coste (€1.00 a €3.00 por unidad) en horario de tarde-noche.",
+    "tiempo": "19:30 - 21:00",
+    "descripcion": "Cena de pinchos en el animado eje peatonal del Carrer Blai. Opción prioritaria recomendada: La Tasqueta de Blai.",
     "imagen": "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800",
     "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Carrer+de+Blai+Barcelona",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=La+Tasqueta+de+Blai+Barcelona",
     "viability": {
       "horario": "Tarde-noche.",
-      "tarifas": "Pinchos: €1.00 - €3.00."
+      "tarifas": "Pinchos: €1.00 - €3.00 por unidad."
     },
-    "viability_full": "Poble Sec, Poblenou y Barceloneta:\n* Carrer Blai (Poble Sec): Zona popular de tapeo y pinchos a bajo coste (de €1.00 a €3.00 por unidad) operativa tarde-noche. Ideal para cena gastronómica en un ambiente familiar informal."
+    "viability_full": "Poble Sec y Carrer Blai:\n* Eje gastronómico de tapeo tradicional. La Tasqueta de Blai destacada como opción de referencia con variada oferta de pinchos fríos y calientes."
+  },
+  {
+    "id": "t_caminata_fuente",
+    "dia": 3,
+    "fecha": "20/9",
+    "nombre": "Paseo hacia la Fuente Mágica",
+    "lat": 41.373,
+    "lng": 2.155,
+    "tiempo": "21:00 - 21:30",
+    "descripcion": "Caminata breve desde Poble Sec hasta Plaza de España y las escalinatas del MNAC para situarse antes del show de las 21:30 hs.",
+    "imagen": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Fuente+Magica+de+Montjuic+Barcelona",
+    "viability": {
+      "horario": "Caminata peatonal.",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Desplazamiento a pie desde la zona de pinchos en Poble Sec hacia la explanada y escalinatas de la Fuente Mágica."
   },
   {
     "id": "t23",
@@ -731,22 +714,22 @@ const PUNTOS_TURISTICOS = [
     "lat": 41.3712,
     "lng": 2.1517,
     "tiempo": "21:30 - 22:30",
-    "descripcion": "Ubicación en las escalinatas del Palacio Nacional (MNAC) para presenciar las coreografías operativas de agua, luz y música en domingos de septiembre.",
+    "descripcion": "Espectáculo nocturno de agua, luz y música a las 21:30 hs presenciado desde las escalinatas del Palacio Nacional (MNAC).",
     "imagen": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Fuente+Magica+de+Montjuic+Barcelona",
     "viability": {
-      "horario": "Jue-Sáb 21:00-22:00 o Mié-Dom 21:30-22:30.",
+      "horario": "Espectáculo 21:30 - 22:30 hs.",
       "tarifas": "Gratuito."
     },
-    "viability_full": "Montjuïc y la Fuente Mágica:\n* Reapertura de la Fuente: Restablecida tras casi tres años de inactividad por sequía extrema y modernización. Cuenta con un sistema optimizado de menor consumo hídrico.\n* Horario de Espectáculos en Septiembre: Se programan de jueves a sábado entre las 21:00 y las 22:00, o de miércoles a domingo de 21:30 a 22:30 (sujeto a transición de horarios de la corporación municipal). Acceso libre y gratuito.\n* Ubicación recomendada: Escalinatas del Palacio Nacional (MNAC) para ver la perspectiva de fondo."
+    "viability_full": "Montjuïc y la Fuente Mágica:\n* Espectáculo musical y lumínico en las escalinatas del Palacio Nacional (MNAC) a las 21:30 hs. Acceso libre y gratuito."
   },
   {
     "id": "t24",
     "dia": 4,
     "fecha": "21/9",
     "nombre": "Arco del Triunfo",
-    "lat": 41.3910,
+    "lat": 41.391,
     "lng": 2.1806,
     "tiempo": "09:30 - 10:00",
     "descripcion": "Punto de encuentro e inicio del recorrido.",
@@ -855,7 +838,7 @@ const PUNTOS_TURISTICOS = [
     "fecha": "21/9",
     "nombre": "Frente marítimo",
     "lat": 41.3833,
-    "lng": 2.1950,
+    "lng": 2.195,
     "tiempo": "12:30 - 13:00",
     "descripcion": "Legado olímpico de 1992 y gran transformación urbanística litoral.",
     "imagen": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800",
@@ -922,25 +905,6 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Traslado y conexión rápida en transporte público desde la estación de Miramar de Montjuïc hacia el Paseo de Gracia."
   },
   {
-    "id": "t29",
-    "dia": 4,
-    "fecha": "21/9",
-    "nombre": "Casa Batlló",
-    "lat": 41.3917,
-    "lng": 2.1649,
-    "tiempo": "18:00 - 19:30",
-    "descripcion": "Recorrido interior con audioguía inteligente. Tickets ya adquiridos para la franja de las 18:00 hs.",
-    "imagen": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800",
-    "isFreeTour": false,
-    "isReserved": true,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Casa+Batllo+Barcelona",
-    "viability": {
-      "horario": "Ya Reservado (18:00 hs)",
-      "tarifas": "Total pagado €117"
-    },
-    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia.\n* Estado: ✅ Tickets ya reservados y pagados (Total: €117) para el ingreso a las 18:00 hs. Duración estimada de la visita: 1 hora y 30 minutos.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea."
-  },
-  {
     "id": "t30",
     "dia": 4,
     "fecha": "21/9",
@@ -958,6 +922,25 @@ const PUNTOS_TURISTICOS = [
       "tarifas": "Gratuito (vista exterior)"
     },
     "viability_full": "Casa Amatller:\n* Recorrido: Parada panorámica exterior de 15 minutos para tomar fotos de la impresionante fachada de Puig i Cadafalch. No se realiza visita interior."
+  },
+  {
+    "id": "t29",
+    "dia": 4,
+    "fecha": "21/9",
+    "nombre": "Casa Batlló",
+    "lat": 41.3917,
+    "lng": 2.1649,
+    "tiempo": "18:00 - 19:30",
+    "descripcion": "Recorrido interior con audioguía inteligente. Tickets ya adquiridos para la franja de las 18:00 hs.",
+    "imagen": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800",
+    "isFreeTour": false,
+    "isReserved": true,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Casa+Batllo+Barcelona",
+    "viability": {
+      "horario": "Ya Reservado (18:00 hs)",
+      "tarifas": "Total pagado €117"
+    },
+    "viability_full": "Casa Batlló:\n* Ubicación: En la \"Manzana de la Discordia\" en Paseo de Gracia.\n* Estado: ✅ Tickets ya reservados y pagados (Total: €117) para el ingreso a las 18:00 hs. Duración estimada de la visita: 1 hora y 30 minutos.\n* Inclusiones: Visita interior con audioguía de realidad aumentada inteligente, acceso al Gaudí Cube (espacio de proyección LED inmersivo diseñado por Refik Anadol) y azotea."
   },
   {
     "id": "t31",
@@ -978,32 +961,87 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Paseo de Gracia: Eje modernista central de acceso libre y transitable las 24 horas, ideal para ver el diseño de los pavimentos (panots de Gaudí) y las farolas modernistas diseñadas por Pere Falqués."
   },
   {
+    "id": "t33_pre",
+    "dia": 5,
+    "fecha": "22/9",
+    "nombre": "Recorrido Sant Martí y Traslado",
+    "lat": 41.415,
+    "lng": 2.202,
+    "tiempo": "08:30 - 09:30",
+    "descripcion": "Salida a las 08:30 hs para pasear brevemente por el barrio de Sant Martí antes de la apertura y cubrir el traslado a la biblioteca.",
+    "imagen": "https://images.unsplash.com/photo-1522083165195-342750297f4e?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Biblioteca+Gabriel+Garcia+Marquez+Barcelona",
+    "viability": {
+      "horario": "Paseo exterior",
+      "tarifas": "Gratuito."
+    },
+    "viability_full": "Recorrido matutino libre por el entorno urbano de Sant Martí previo a la apertura de la biblioteca."
+  },
+  {
     "id": "t33",
     "dia": 5,
     "fecha": "22/9",
     "nombre": "Biblioteca Gabriel García Márquez",
     "lat": 41.4172731,
     "lng": 2.1999626,
-    "tiempo": "12:00 - 13:30",
-    "descripcion": "Visita a la espectacular biblioteca pública galardonada como la mejor del mundo en 2023. Destaca por su icónico diseño arquitectónico de madera y su especialización en literatura latinoamericana.",
+    "tiempo": "09:30 - 10:30",
+    "descripcion": "Ingreso a las 09:30 hs (horario de apertura) a la espectacular biblioteca galardonada como la mejor del mundo en 2023. Diseño icónico de madera de 1 hora de duración.",
     "imagen": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/place/Biblioteca+Gabriel+Garc%C3%ADa+M%C3%A1rquez/@41.4172731,2.1999626,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a397db7a8a6b:0x82a6835eee60e570!8m2!3d41.4172731!4d2.1999626!16s%2Fg%2F11h79qxdww!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D",
     "viability": {
-      "horario": "Mar-Jue-Vie: 9:30-20:30 | Lun-Mié: 9:30-13:30, 15:30-20:30 | Sáb: 10:00-14:00, 16:00-20:00 | Dom: 10:00-14:00.",
+      "horario": "Apertura 09:30 hs.",
       "tarifas": "Acceso gratuito."
     },
-    "viability_full": "Biblioteca Gabriel García Márquez:\n* Reconocimiento: Galardonada como la mejor biblioteca pública del mundo en 2023 por la IFLA.\n* Arquitectura: Impresionante diseño geométrico sostenible con estructura de madera visible, que se asemeja a hojas de libros abiertas.\n* Horario de Apertura el Martes: De 9:30 a 20:30 hs. Ideal para la visita al mediodía (12:00 - 13:30 hs).\n* Tarifas: Acceso 100% libre y gratuito."
+    "viability_full": "Biblioteca Gabriel García Márquez:\n* Reconocimiento: Galardonada como la mejor biblioteca pública del mundo en 2023 por la IFLA.\n* Visita a primera hora (09:30 hs apertura)."
+  },
+  {
+    "id": "t33_traslado",
+    "dia": 5,
+    "fecha": "22/9",
+    "nombre": "Traslado al Palau de la Música",
+    "lat": 41.402,
+    "lng": 2.187,
+    "tiempo": "10:30 - 11:00",
+    "descripcion": "Traslado de 30 minutos desde la biblioteca hacia el centro histórico para la visita guiada al Palau.",
+    "imagen": "https://images.unsplash.com/photo-1549417229-aa67d3263c09?w=800",
+    "isFreeTour": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Palau+de+la+Musica+Catalana+Barcelona",
+    "viability": {
+      "horario": "30 min de viaje",
+      "tarifas": "Transporte estándar (€2.50)."
+    },
+    "viability_full": "Traslado en transporte público desde la zona de Sant Martí/Poblenou hasta Ciutat Vella."
+  },
+  {
+    "id": "t15",
+    "dia": 5,
+    "fecha": "22/9",
+    "nombre": "Palau de la Música Catalana",
+    "lat": 41.3875,
+    "lng": 2.1753,
+    "tiempo": "11:30 - 12:30",
+    "descripcion": "Visita guiada reservada de 1 hora. Tickets ya adquiridos para la franja de las 11:30 hs.",
+    "imagen": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800",
+    "isFreeTour": false,
+    "isReserved": true,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Palau+de+la+Musica+Catalana+Barcelona",
+    "viability": {
+      "horario": "Ya Reservado (11:30 hs)",
+      "tarifas": "Total pagado €72.00 (Toda la familia)"
+    },
+    "viability_full": "Palau de la Música Catalana:\n* Estado: ✅ Visita guiada reservada y pagada (Total: €72.00 para la familia) para las 11:30 hs. Duración: 1 hora.\n* Obra cumbre del modernismo catalán diseñada por Lluís Domènech i Montaner."
   },
   {
     "id": "t33b",
     "dia": 5,
     "fecha": "22/9",
-    "nombre": "Almuerzo y Traslado",
-    "lat": 41.4036,
-    "lng": 2.1744,
-    "tiempo": "13:30 - 15:45",
-    "descripcion": "Tiempo libre para almorzar antes de ingresar a la Sagrada Familia.",
+    "nombre": "Almuerzo y Traslado a Sagrada Familia",
+    "lat": 41.395,
+    "lng": 2.175,
+    "tiempo": "12:30 - 15:30",
+    "descripcion": "Tiempo libre para almorzar en el centro / El Born tras salir del Palau y posterior traslado a la Sagrada Familia.",
     "imagen": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
@@ -1011,7 +1049,7 @@ const PUNTOS_TURISTICOS = [
       "horario": "Libre",
       "tarifas": "Consumo de restauración libre."
     },
-    "viability_full": "Almuerzo cerca de la Sagrada Familia."
+    "viability_full": "Almuerzo post-visita del Palau y traslado cómodo hacia la Sagrada Familia."
   },
   {
     "id": "t34",
@@ -1033,40 +1071,41 @@ const PUNTOS_TURISTICOS = [
     "viability_full": "Basílica de la Sagrada Familia:\n* Estado: ✅ Tickets ya reservados y pagados (Total: €118) con entrada a las 15:45 hs y subida a la Torre de la Pasión a las 17:15 hs."
   },
   {
+    "id": "t36",
+    "dia": 5,
+    "fecha": "22/9",
+    "nombre": "Mirador Torre Glòries",
+    "lat": 41.4036,
+    "lng": 2.1894,
+    "tiempo": "18:30 - 20:00",
+    "descripcion": "Subida al mirador panorámico de la planta 30. Presupuestado costo estimado de €51.00 total para los 5 integrantes (entradas no compradas aún).",
+    "imagen": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800",
+    "isFreeTour": false,
+    "isReserved": false,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Torre+Glories+Barcelona",
+    "viability": {
+      "horario": "10:00 - 21:00 hs.",
+      "tarifas": "Presupuestado: €51.00 total (5 personas, no compradas aún)."
+    },
+    "viability_full": "Torre Glòries:\n* Mirador de la planta 30 y espacio Hyperview Barcelona.\n* Presupuesto: Presupuestado €51.00 para la familia de 5 personas. Pendiente de compra."
+  },
+  {
     "id": "t35",
     "dia": 5,
     "fecha": "22/9",
-    "nombre": "Paseo por Poblenou",
+    "nombre": "Paseo por la Rambla de Poblenou y Cena",
     "lat": 41.4014,
     "lng": 2.2045,
-    "tiempo": "18:00 - 19:00",
-    "descripcion": "Merienda por la zona y recorrido hacia la Torre Glòries.",
+    "tiempo": "20:00 en adelante",
+    "descripcion": "Cierre del día paseando y cenando por la animada Rambla de Poblenou.",
     "imagen": "https://images.unsplash.com/photo-1522083165195-342750297f4e?w=800",
     "isFreeTour": false,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Rambla+del+Poblenou+Barcelona",
     "viability": {
       "horario": "Libre 24 hs.",
-      "tarifas": "Gratuito."
+      "tarifas": "Consumo libre."
     },
-    "viability_full": "Poble Sec, Poblenou y Barceloneta:\n* Poblenou: Antiguo distrito fabril reconvertido en barrio moderno. Posee una gran fisionomía industrial, lofts y cafeterías de especialidad muy próximas a la playa de Bogatell. Acceso peatonal libre las 24 horas."
-  },
-  {
-    "id": "t36",
-    "dia": 5,
-    "fecha": "22/9",
-    "nombre": "Torre Glòries y Rambla de Poblenou",
-    "lat": 41.4036,
-    "lng": 2.1894,
-    "tiempo": "19:00 - 20:30",
-    "descripcion": "Subida a las 19:00 hs para ver el anochecer, terminando con un paseo nocturno por la Rambla de Poblenou.",
-    "imagen": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800",
-    "isFreeTour": false,
-    "maps_link": "https://www.google.com/maps/search/?api=1&query=Torre+Glories+Barcelona",
-    "viability": {
-      "horario": "10:00 - 21:00 hs.",
-      "tarifas": "€18.00."
-    },
-    "viability_full": "Torre Glòries:\n* Características: Rascacielos diseñado por Jean Nouvel, característico por su silueta de bala y su iluminación exterior variable mediante paneles de vidrio.\n* Horarios en Septiembre: De lunes a domingo de 10:00 a 21:00.\n* Tarifas: El acceso básico (Hyperview Barcelona + Mirador de la planta 30 a 125 metros de altura) cuesta €18.00 online. El acceso a la escultura suspendida Cloud Cities requiere suplemento de pago directo."
+    "viability_full": "Población y ambiente de barrio tradicional con rambla arbolada y variada oferta de restauración."
   },
   {
     "id": "t_alamo",
