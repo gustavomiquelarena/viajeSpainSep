@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         L.control.zoom({ position: "bottomright" }).addTo(map);
 
         // Add CartoDB Voyager tiles (clean, beautiful map style)
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_32sj_1_dde0a6366ab8345035392ddf", {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 20

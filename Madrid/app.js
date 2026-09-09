@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         L.control.zoom({ position: "bottomright" }).addTo(map);
 
         // Add CartoDB Voyager tiles (clean, beautiful map style)
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_32sj_1_dde0a6366ab8345035392ddf", {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 20
@@ -423,14 +423,24 @@ document.addEventListener("DOMContentLoaded", () => {
                  </div>
 
                  <div class="viability-card info-card">
-                     <div class="card-title-sec">
-                         <span class="monument-name">Museo Nacional del Prado</span>
-                         <span class="info-badge">Comprar Online</span>
-                     </div>
-                     <div class="card-body-sec">
-                         <p><strong>Aviso:</strong> Imprescindible reservar pase horario online para evitar largas colas de taquilla. Menores de 18 años entran gratis, pero requieren ticket de acceso gratuito.</p>
-                     </div>
-                 </div>
+                      <div class="card-title-sec">
+                          <span class="monument-name">Museo Nacional del Prado</span>
+                          <span class="warning-badge" style="background-color: rgba(16, 185, 129, 0.15); color: #10b981;">Ya Reservado</span>
+                      </div>
+                      <div class="card-body-sec">
+                          <p><strong>Aviso:</strong> Tickets ya comprados para el martes 29/9 a las <strong>11:15 hs</strong> (duración 2 horas: 11:15 a 13:15 hs). Total pagado: <strong>€30.00</strong>.</p>
+                      </div>
+                  </div>
+
+                  <div class="viability-card info-card">
+                      <div class="card-title-sec">
+                          <span class="monument-name">Templo de Debod</span>
+                          <span class="warning-badge" style="background-color: rgba(16, 185, 129, 0.15); color: #10b981;">Ya Reservado</span>
+                      </div>
+                      <div class="card-body-sec">
+                          <p><strong>Aviso:</strong> Entrada reservada para el miércoles 30/9 a las <strong>12:00 hs</strong>. Acceso al templo interior con aforo controlado (gratuito con reserva).</p>
+                      </div>
+                  </div>
 
                  <div class="viability-card info-card">
                      <div class="card-title-sec">
@@ -633,6 +643,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="popup-container">
                             <div class="popup-header">
                                 <span class="option-badge" style="background:var(--color-tourist); color:white;">Día ${pt.dia}</span>
+                                ${pt.isReserved ? '<span class="option-badge" style="background:rgba(16, 185, 129, 0.15); color:#10b981; font-weight:700; border:1px solid rgba(16,185,129,0.35);">✅ Reservado</span>' : ''}
                                 <span class="time-badge">${pt.tiempo}</span>
                             </div>
                             <div class="popup-title">${pt.nombre}</div>
