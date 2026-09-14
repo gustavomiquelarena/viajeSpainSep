@@ -365,16 +365,17 @@ const PUNTOS_TURISTICOS = [
     "id": "m_toledo_tour",
     "dia": 5,
     "fecha": "2/10",
-    "nombre": "Tour Civitatis Toledo",
-    "lat": 39.8593,
-    "lng": -4.0253,
-    "tiempo": "11:00 - 13:30",
-    "descripcion": "Recorrido de 2h30m guiado por la ciudad de Toledo.",
+    "nombre": "Free walking tour Sandemans Toledo",
+    "lat": 39.8594,
+    "lng": -4.0215,
+    "tiempo": "11:00 - 13:00",
+    "descripcion": "Free walking tour guiado de 2 horas por el centro histórico de Toledo con SANDEMANs. Punto de partida en la Plaza de Zocodover.",
     "imagen": "https://images.unsplash.com/photo-1548678967-f1aca58f6236?w=800",
-    "isFreeTour": false,
+    "isFreeTour": true,
+    "isReserved": true,
     "maps_link": "https://www.google.com/maps/search/?api=1&query=Plaza+de+Zocodover+Toledo",
-    "viability": { "horario": "11:00 hs", "tarifas": "€48 total" },
-    "viability_full": "Tour Civitatis en Toledo, costo total de €48 para toda la familia."
+    "viability": { "horario": "11:00 hs (2 hs de duración)", "tarifas": "✅ Reservado (Propina libre)" },
+    "viability_full": "Free walking tour Sandemans Toledo:\n* Estado: ✅ Reservado para las 11:00 hs.\n* Duración: 2 horas (11:00 a 13:00 hs).\n* Punto de partida: Plaza de Zocodover (marcado en el mapa).\n* Tarifa: Free Tour (propina libre al guía)."
   },
 
   // DIA 6 (3/10) - Sábado
